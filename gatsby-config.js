@@ -1,9 +1,13 @@
 module.exports = {
+  pathPrefix: "/InfinityCalcs",
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'InfinityCalcs',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-emotion`,
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -23,6 +27,12 @@ module.exports = {
         theme_color: '#663399',
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/styles/typography.js`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
