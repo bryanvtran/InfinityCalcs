@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import logo from '../images/logo.png'
 import * as styles from '../styles/styles.js'
+import logo from '../images/logo.png'
+
+import Dropdown from './dropdown'
 
 const Nav = () => (
   <div css={styles.nav}>
@@ -11,9 +13,12 @@ const Nav = () => (
     </Link>
     <ul css={styles.navLinks}>
       <li>
-        <Link to="/">
-          Calculators
-        </Link>
+        <Dropdown title="Calculators">
+          <Link to="/ti-84-plus">TI-84 Plus</Link>
+          <Link to="/ti-84-ce">TI-84 CE</Link>
+          <Link to="/ti-83-plus">TI-83 Plus</Link>
+          <Link to="/ti-89-titanium">TI-89</Link>
+        </Dropdown>
       </li>
       <li>
         <Link to="/">

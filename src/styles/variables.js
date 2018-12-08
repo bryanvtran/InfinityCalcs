@@ -1,5 +1,6 @@
 const variables = {
     black: '#111',
+    white: '#FFF',
     blue: '#3785E3',
     lightBlue: '#80D7FA',
     red: '#EF8087',

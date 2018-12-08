@@ -1,6 +1,36 @@
 import variables from './variables'
 
+import arrowIcon from '../images/arrow.png'
 import headerImg from '../images/header-bg.png'
+
+export const active = {
+    ':after': {
+        transformOrigin: 'left !important',
+        transform: 'scaleX(1) !important',
+    }
+}
+
+export const hover = {
+    ':after': {
+        content: '""',
+        position: 'absolute',
+        bottom: '-4px',
+        left: '2px',
+        height: '2px',
+        width: '20px',
+        backgroundColor: variables.blue,
+        transitionOrigin: 'right',
+        transform: 'scaleX(0)',
+        transition: 'transform .3s',
+    },
+    ':hover': {
+        ':after': {
+            transformOrigin: 'left',
+            transform: 'scaleX(1)',
+        }
+    }
+}
+
 
 export const container = {
     margin: '0 auto',
@@ -29,16 +59,75 @@ export const navLinks = {
     float: 'right',
     '& li': {
         display: 'inline-block',
-        padding: '0 12px',
+        padding: '0 16px',
         lineHeight: '42px',
         ':last-of-type': {
             paddingRight: 0
         },
-        '& a': {
+        '& a, & button': {
             color: variables.black,
-            textDecoration: 'none'
+            textDecoration: 'none',
+            position: 'relative',
+            background: 'transparent',
+            padding: 0,
+            ...hover
         }
     }
+}
+
+export const dropdownLink = {
+    position: 'relative',
+    'li &': {
+        paddingRight: 14
+    },
+    '& button': {
+        border: 'none',
+        cursor: 'pointer',
+        outline: 'none',
+        zIndex: 2,
+        ':before': {
+            content: '""',
+            position: 'absolute',
+            right: -16,
+            top: 4,
+            width: 10,
+            height: '1em',
+            background: `url(${arrowIcon}) no-repeat center center`,
+            backgroundSize: '100%'
+        },
+    },
+    '& ul': {
+        display: 'none',
+        position: 'absolute',
+        top: 0,
+        left: -6,
+        margin: 0,
+        paddingTop: '2em',
+        width: 'calc(100% + 14px)',
+        border: `1px solid ${variables.black}`,
+        textAlign: 'center',
+        background: variables.white,
+
+        '& li': {
+            width: '85%',
+            padding: 0,
+            zIndex: 1,
+            borderTop: `1px solid ${variables.black}`,
+            margin: 0,
+
+            ':first-of-type': {
+                border: 'none'
+            },
+
+            '& a': {
+                ':hover': {
+                    ':after': {
+                        transform: 'scaleX(0)'
+                    }
+                }
+            }
+        }
+    },
 }
 
 export const header = {
@@ -146,6 +235,7 @@ export const calcLinkWrapper = {
         fontWeight: 600,
         margin: '32px',
         width: '35%',
+        textDecoration: 'none',
 
         '@media(max-width: 767px)': {
             width: '100%',

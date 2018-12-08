@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import * as styles from '../styles/styles'
 
@@ -12,7 +11,7 @@ const IndexPage = () => (
   <Layout>
     <Header title="Graphing Calculator Help" subtitle="Tutorials | Programming | Community"/>
     <div css={styles.container}>
-      <SectionHeader title="Graphic Calculators" />
+      <SectionHeader title="Graphing Calculators" />
       <div css={styles.calcLinkWrapper}>
         <CalcLink title="TI-84 Plus" href="ti-84-plus" color={styles.bgBlue} />
         <CalcLink title="TI-84 CE" href="ti-84-ce" color={styles.bgRed} />
