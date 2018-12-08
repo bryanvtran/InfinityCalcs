@@ -4,7 +4,6 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import '../styles/normalize.css'
-import * as styles from '../styles/styles.js'
 
 import Nav from './nav'
 import Footer from './footer'
