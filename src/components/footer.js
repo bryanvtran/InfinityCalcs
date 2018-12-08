@@ -8,7 +8,9 @@ const Footer = () => (
   <div css={{...styles.container, ...styles.footer}}>
     <hr css={styles.footerBar} />
     <hr css={styles.footerBarSmall} />
-    <img src={youtubeLogo} alt="YouTube" css={styles.youtubeImg} />
+    <a href="https://www.youtube.com/user/MrAcademicTutoring" target="_blank" rel="noopener noreferrer">
+      <img src={youtubeLogo} alt="YouTube" css={styles.youtubeImg} />
+    </a>
     <p>
       &copy; 2018 Infinity Calcs | Made with <img src={heartIcon} alt="<3" css={styles.heartIcon}/>
     </p>

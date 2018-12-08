@@ -236,7 +236,10 @@ export const calcLinkWrapper = {
         margin: '32px',
         width: '35%',
         textDecoration: 'none',
-
+        transition: 'all .2s ease-in-out',
+        ':hover': {
+            transform: 'scale(1.03)'
+        },
         '@media(max-width: 767px)': {
             width: '100%',
             margin: '18px'
