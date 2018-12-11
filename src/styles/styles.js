@@ -152,7 +152,7 @@ export const dropdownLink = {
             content: '""',
             position: 'absolute',
             right: -16,
-            top: 4,
+            top: 'calc(50% - .5em)',
             width: 10,
             height: '1em',
             background: `url(${arrowIcon}) no-repeat center center`,
