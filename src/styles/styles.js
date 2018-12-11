@@ -2,6 +2,35 @@ import variables from './variables'
 
 import arrowIcon from '../images/arrow.png'
 import headerImg from '../images/header-bg.png'
+import underlineImg from '../images/underline.png'
+
+export const defaultMobilePadding = {
+    '@media(max-width: 767px)': {
+        padding: '24px 16px'
+    },
+}
+
+export const defaultPadding = {
+    padding: '48px 32px',
+    ...defaultMobilePadding
+}
+
+export const link = {
+    color: variables.lightBlue,
+    textDecoration: 'underline',
+}
+
+export const center = {
+    textAlign: 'center'
+}
+
+export const bold = {
+    fontWeight: 600,
+}
+
+export const textSmall = {
+    fontSize: '.9em'
+}
 
 export const active = {
     ':after': {
@@ -11,6 +40,8 @@ export const active = {
 }
 
 export const hover = {
+    position: 'relative',
+
     ':after': {
         content: '""',
         position: 'absolute',
@@ -31,21 +62,38 @@ export const hover = {
     }
 }
 
+export const underline = {
+    position: 'relative',
+
+    ':after': {
+        content: '""',
+        position: 'absolute',
+        bottom: '-4px',
+        left: '2px',
+        height: '3px',
+        width: '30px',
+        backgroundColor: variables.lightBlue,
+    },
+}
+
+export const selected = {
+    borderBottom: `3px solid ${variables.lightBlue}`
+}
 
 export const container = {
     margin: '0 auto',
     maxWidth: 960,
-    padding: '48px 32px',
-    '@media(max-width: 767px)': {
-        padding: '24px 16px'
-    },
+    ...defaultPadding
 }
 
 export const nav = {
     padding: '24px 32px',
+    position: 'absolute',
+    width: '100%',
 
     '@media(max-width: 767px)': {
-        padding: '24px 16px'
+        padding: '24px 16px',
+        position: 'relative'
     },
 }
 
@@ -57,10 +105,13 @@ export const navLogo = {
 export const navLinks = {
     listStyle: 'none',
     float: 'right',
+    margin: 0,
+
     '& li': {
         display: 'inline-block',
         padding: '0 16px',
         lineHeight: '42px',
+        margin: 0,
         ':last-of-type': {
             paddingRight: 0
         },
@@ -73,6 +124,18 @@ export const navLinks = {
             ...hover
         }
     }
+}
+
+export const navLinksMobile = {
+    '@media(max-width: 767px)': {
+        display: 'none',
+        float: 'none',
+        textAlign: 'center',
+
+        '& li': {
+            display: 'block'
+        }
+    },
 }
 
 export const dropdownLink = {
@@ -132,12 +195,12 @@ export const dropdownLink = {
 
 export const header = {
     textAlign: 'center',
-    padding: '100px 32px 200px',
+    padding: '200px 32px',
     background: `url(${headerImg}) bottom no-repeat`,
     backgroundSize: '100%',
 
     '@media(max-width: 1024px)': {
-        padding: '80px 32px 160px'
+        padding: '160px 32px'
     },
 
 
@@ -244,5 +307,146 @@ export const calcLinkWrapper = {
             width: '100%',
             margin: '18px'
         },
+    }
+}
+
+export const calcHeader = {
+    ...defaultPadding,
+    paddingTop: 100,
+    paddingBottom: 60,
+    textAlign: 'center',
+    background: variables.lightBlueBg, 
+    '& h1': {
+        position: 'relative',
+        display: 'inline-block',
+        
+        ':after': {
+            content: '""',
+            background: `url(${underlineImg}) repeat-x`,
+            height: 4,
+            backgroundSize: 'contain',
+            width: '100%',
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+        }
+    }
+}
+
+export const calcContainer = {
+    borderBottom: `1px solid ${variables.black}`,
+    '& h2': {
+        ...underline,
+        fontSize: '1.2em',
+        lineHeight: 1.2,
+        marginBottom: 32
+    },
+    '& p': {
+        width: '90%',
+        margin: '0 auto 32px'
+    }
+}
+
+export const noBorder = {
+    border: 'none'
+}
+
+export const definitionsNav = {
+    '& ul': {
+        listStyle: 'none',
+        margin: '1em auto 2em',
+        textAlign: 'center',
+        '& li': {
+            display: 'inline',
+            '& span': {
+                cursor: 'pointer'
+            },
+            '& a': {
+                textDecoration: 'none',
+                color: variables.black
+            }
+        }
+    }
+}
+
+export const definitions = {
+    '& p': {
+        fontWeight: 600,
+        fontSize: '1.6em'
+    },
+    '& ul': {
+        maxWidth: 600,
+        margin: '0 auto',
+        columnCount: 2,
+        columnGap: 4,
+        listStylePosition: 'inside',
+        '& li': {
+            marginBottom: 4,
+        }
+    }
+}
+
+export const mathProblems = {
+    listStyle: 'none',
+    margin: '1em auto',
+    columnCount: 3,
+    columnGap: 16,
+    maxWidth: 600,
+    '@media(max-width: 767px)': {
+        columnCount: 2,
+    },
+    '& li': {
+        '& a': {
+            display: 'inline-block',
+            width: '100%',
+            padding: '42px 12px',
+            backgroundColor: variables.lightBlue,
+            fontWeight: 600,
+            border: `2px solid ${variables.black}`,
+            textAlign: 'center',
+            color: variables.white,
+            textDecoration: 'none',
+            '@media(max-width: 767px)': {
+                padding: '32px 6px'
+            }
+        }
+    }
+}
+
+export const programming = {
+    listStyle: 'none',
+    margin: '1em auto',
+    maxWidth: 600,
+    '& .wrapper': {
+        padding: '1em 0',
+        borderBottom: `3px solid ${variables.teal}`,
+    },
+    '& .title': {
+        cursor: 'pointer',
+        ':before': {
+            content: '""',
+            background: `url(${arrowIcon}) no-repeat center center`,
+            backgroundSize: '.7em',
+            display: 'inline-block',
+            height: '.9em',
+            width: '.9em',
+            transform: 'rotate(-90deg)',
+            marginRight: 4,
+        }
+    },
+    '& .definition': {
+        display: 'none',
+        padding: '1em 0 0',
+        textAlign: 'center',
+        width: '90%',
+        margin: '0 auto'
+    },
+    '& .active': {
+        '& .title:before': {
+            transform: 'rotate(0)',
+        },
+        '& .definition': {
+            display: 'block'
+        }
     }
 }

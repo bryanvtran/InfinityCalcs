@@ -11,7 +11,7 @@ const Nav = () => (
     <Link to="/">
       <img src={logo} alt="InfinityCalcs" css={styles.navLogo} />
     </Link>
-    <ul css={styles.navLinks}>
+    <ul css={[styles.navLinks, styles.navLinksMobile]}>
       <li>
         <Dropdown title="Calculators">
           <Link to="/ti-84-plus">TI-84 Plus</Link>
