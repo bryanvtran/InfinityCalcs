@@ -6,25 +6,48 @@ import * as styles from '../styles/styles.js'
 class DefinitionsList extends React.Component {
     constructor(props) {
         super(props)
-        if (props.parameters.type === 'term') {
-            this.state = {
-                selected: props.parameters.letter,
-                term: props.parameters.term
+
+        // path prefix fix
+        const path = this.props.path.split('/InfinityCalcs')
+        const subpath = path[path.length-1] 
+        let split = subpath.split('/where-to-find/')
+        split = split[split.length-1].split('/')
+        if (!split[split.length-1]) {
+            split.pop()
+        }
+
+        let parameters
+        if (split.length === 2) {
+            // if path size is 5, then we are on a term
+            parameters = {
+                selected: split[0].toUpperCase(),
+                term: split[1]
             }
         }
-        else if (props.parameters.type === 'letter') {
-            this.state = {
-                selected: props.parameters.letter.toUpperCase(),
+        else if (split.length === 1 && split[0]) {
+            // if 4, then we are on a letter
+            parameters = {
+                selected: split[0].toUpperCase()
             }
         }
         else {
-            this.state = {
+            // if 3 or not any of the above, just show all
+            parameters = {
                 selected: 'ALL'
             }
+        }
+
+        const subpath2 = subpath.split('where-to-find')[0]
+
+        this.state = {
+            subpath: `${subpath2}where-to-find`,
+            ...parameters
         }
     }
 
     render() {
+        const subpath = this.state.subpath
+
         const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
         let arr = this.props.terms
         if (this.state.selected !== 'ALL') {
@@ -35,8 +58,8 @@ class DefinitionsList extends React.Component {
             <>
                 <div css={styles.definitionsNav}>
                     <ul>
-                        {letters.map((letter, i) => (<li key={i}> <span css={this.state.selected === letter ? styles.selected : {}}><Link to={`${this.props.path}/${letter.toLowerCase()}`}>{letter}</Link></span> |</li>))}
-                        <li css={{paddingLeft: 4}}><span css={this.state.selected === 'ALL' ? styles.selected : {}}><Link to={`${this.props.path}/`}>See all</Link></span></li>
+                        {letters.map((letter, i) => (<li key={i}> <span css={this.state.selected === letter ? styles.selected : {}}><Link to={`${subpath}/${letter.toLowerCase()}/`}>{letter}</Link></span> |</li>))}
+                        <li css={{paddingLeft: 4}}><span css={this.state.selected === 'ALL' ? styles.selected : {}}><Link to={`${subpath}/`}>See all</Link></span></li>
                     </ul>
                 </div>
                 <div css={styles.definitionsList}>
@@ -45,7 +68,7 @@ class DefinitionsList extends React.Component {
                         {arr.length ? arr.map((term, i) => (
                             <li key={i} css={term.node.frontmatter.title.toLowerCase() === this.state.term ? [styles.definition, styles.showDefinition] : [styles.definition, styles.hideDefinition]}>
                                 <div className="term">
-                                    <Link to={term.node.frontmatter.title.toLowerCase() === this.state.term ? `${this.props.path}/${term.node.frontmatter.title[0].toLowerCase()}` : `${this.props.path}/${term.node.frontmatter.title[0].toLowerCase()}/${term.node.frontmatter.title.toLowerCase()}`}>{term.node.frontmatter.title}</Link>
+                                    <Link to={term.node.frontmatter.title.toLowerCase() === this.state.term ? `${subpath}/${term.node.frontmatter.title[0].toLowerCase()}/` : `${subpath}/${term.node.frontmatter.title[0].toLowerCase()}/${term.node.frontmatter.title.toLowerCase()}/`}>{term.node.frontmatter.title}</Link>
                                 </div>
                                 <div className="definition" dangerouslySetInnerHTML={{ __html: term.node.html }}/>                         
                             </li>
