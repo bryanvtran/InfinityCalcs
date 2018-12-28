@@ -2,7 +2,7 @@
 title: "abs("
 ---
 
-TI-84 Plus Here's a line for us to start with.
+TI-89 Titanium Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
 

@@ -59,7 +59,6 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.calcs.edges.forEach(({ node }) => {
       const letters = 'abcdefghijklmnopqrstuvwxyz'.split('')
       letters.forEach((letter) => {
-        console.log(`${node.name}/where-to-find/${letter}`)
         createPage({
           path: `${node.name}/where-to-find/${letter}`,
           component: path.resolve(`./src/pages/${node.name}/where-to-find.js`),

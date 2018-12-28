@@ -9,20 +9,27 @@ class Dropdown extends React.Component {
         this.state = {
             active: false
         };
-        this.handleClick = this.handleClick.bind(this)
+        this.onMouseEnter = this.onMouseEnter.bind(this)
+        this.onMouseLeave = this.onMouseLeave.bind(this)
     }
 
-    handleClick(e) {
+    onMouseEnter(e) {
         e.preventDefault()
         this.setState(state => ({
-            active: !state.active
+            active: true
+        }))
+    }
+    onMouseLeave(e) {
+        e.preventDefault()
+        this.setState(state => ({
+            active: false
         }))
     }
 
     render() {
         return (
-            <div css={styles.dropdownLink }>
-                <button css={this.state.active ? styles.active : {}} onClick={this.handleClick} href="#">{this.props.title}</button>
+            <div onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} css={styles.dropdownLink}>
+                <button css={this.state.active ? styles.active : {}} href="#">{this.props.title}</button>
                 <ul style={this.state.active ? {display: 'block'} : {display: 'none'}}>
                     {React.Children.map(this.props.children, (child) => (<li>{child}</li>))}
                 </ul>
