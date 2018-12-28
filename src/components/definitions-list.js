@@ -8,7 +8,7 @@ class DefinitionsList extends React.Component {
         super(props)
         if (props.parameters.type === 'term') {
             this.state = {
-                selected: props.parameters.term[0].toUpperCase(),
+                selected: props.parameters.letter,
                 term: props.parameters.term
             }
         }
