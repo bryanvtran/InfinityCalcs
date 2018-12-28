@@ -401,18 +401,14 @@ export const definitionsList = {
         fontWeight: 600,
         fontSize: '1.6em'
     },
-    '& ul': {
+    '> ul': {
         maxWidth: '85%',
         margin: '0 auto',
         listStyle: 'none',
-        '& li': {
+        '> li': {
             margin: 0,
             padding: '.8em 0',
             borderBottom: `3px solid ${variables.teal}`,
-
-            '& a': {
-                ...clearLink
-            }
         },
         '& .active': {
             '& .title:before': {
@@ -427,6 +423,9 @@ export const definitionsList = {
 
 export const definition = {
     '& .term': {
+        '> a': {
+            ...clearLink
+        },
         ':before': {
             content: '""',
             background: `url(${arrowIcon}) no-repeat center center`,
@@ -440,17 +439,18 @@ export const definition = {
     },
 
     '& .definition': {
-        paddingLeft: 16,
+        padding: '1em',
         '& p': {
-            marginBottom: 4,
+            marginBottom: '1em',
+        },
+        '*:last-child': {
+            marginBottom: 0
         }
     }
 }
 
 export const showDefinition = {
     '& .term': {
-        marginBottom: 16,
-
         ':before': {
             transform: 'rotate(0)',
         }
