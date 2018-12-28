@@ -32,6 +32,11 @@ export const textSmall = {
     fontSize: '.9em'
 }
 
+export const clearLink = {
+    color: variables.black,
+    textDecoration: 'none'
+}
+
 export const active = {
     ':after': {
         transformOrigin: 'left !important',
@@ -313,12 +318,13 @@ export const calcLinkWrapper = {
 export const calcHeader = {
     ...defaultPadding,
     paddingTop: 100,
-    paddingBottom: 60,
+    paddingBottom: 100,
     textAlign: 'center',
     background: variables.lightBlueBg, 
     '& h1': {
         position: 'relative',
         display: 'inline-block',
+        marginBottom: 0,
         
         ':after': {
             content: '""',
@@ -341,10 +347,14 @@ export const calcContainer = {
         lineHeight: 1.2,
         marginBottom: 32
     },
-    '& p': {
+    '& p.body': {
         width: '90%',
         margin: '0 auto 32px'
     }
+}
+
+export const whereToFindContainer = {
+    borderBottom: 'none'
 }
 
 export const noBorder = {
@@ -377,12 +387,82 @@ export const definitions = {
     '& ul': {
         maxWidth: 600,
         margin: '0 auto',
-        columnCount: 2,
+        columnCount: 3,
         columnGap: 4,
         listStylePosition: 'inside',
         '& li': {
             marginBottom: 4,
         }
+    }
+}
+
+export const definitionsList = {
+    '& p.title': {
+        fontWeight: 600,
+        fontSize: '1.6em'
+    },
+    '& ul': {
+        maxWidth: '85%',
+        margin: '0 auto',
+        listStyle: 'none',
+        '& li': {
+            margin: 0,
+            padding: '.8em 0',
+            borderBottom: `3px solid ${variables.teal}`,
+
+            '& a': {
+                ...clearLink
+            }
+        },
+        '& .active': {
+            '& .title:before': {
+                transform: 'rotate(0)',
+            },
+            '& .definition': {
+                display: 'block'
+            }
+        }
+    }
+}
+
+export const definition = {
+    '& .term': {
+        ':before': {
+            content: '""',
+            background: `url(${arrowIcon}) no-repeat center center`,
+            backgroundSize: '.7em',
+            display: 'inline-block',
+            height: '.9em',
+            width: '.9em',
+            transform: 'rotate(-90deg)',
+            marginRight: 4,
+        },
+    },
+
+    '& .definition': {
+        paddingLeft: 16,
+        '& p': {
+            marginBottom: 4,
+        }
+    }
+}
+
+export const showDefinition = {
+    '& .term': {
+        marginBottom: 16,
+
+        ':before': {
+            transform: 'rotate(0)',
+        }
+    },
+    '& .definition': {
+        display: 'block'
+    }
+}
+
+export const hideDefinition = {
+    '& .definition': {
+        display: 'none'
     }
 }
 

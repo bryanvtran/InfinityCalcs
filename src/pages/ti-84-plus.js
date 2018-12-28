@@ -8,7 +8,9 @@ import Definitions from '../components/definitions'
 import * as styles from '../styles/styles.js'
 
 const Ti84Plus = ({ data, ...props }) => {
-  const terms = data.allMarkdownRemark.edges
+  const terms = data.allMarkdownRemark.edges.sort(function (a, b) {
+    return a.node.frontmatter.title.toLowerCase().localeCompare(b.node.frontmatter.title.toLowerCase());
+  });
 
   const toggleDefinition = (e) => {
     e.currentTarget.parentElement.classList.toggle('active')
@@ -19,7 +21,7 @@ const Ti84Plus = ({ data, ...props }) => {
       <CalcLayout title="TI-84 Plus">
           <div css={[styles.container, styles.calcContainer]}>
             <h2>Getting Started</h2>
-            <p>TI-84 Plus is a versatile, powerful graphing calculator. Take a look at the guide below if you’re just starting out.</p>
+            <p className="body">TI-84 Plus is a versatile, powerful graphing calculator. Take a look at the guide below if you’re just starting out.</p>
             <div css={styles.center}>
               <Link css={[styles.link, styles.bold]} to='/ti-84-plus/starters-guide'>Starter's Guide</Link>
             </div>
@@ -78,7 +80,7 @@ export default Ti84Plus
 export const query = graphql`
 {
   allMarkdownRemark(
-    sort: { fields: [frontmatter___title], order: DESC },
+    sort: { fields: [frontmatter___title], order: ASC },
     filter: { fileAbsolutePath: { regex: "/(ti-84-plus)/.*(.md)$/"}}
   ) {
     edges {

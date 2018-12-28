@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import * as styles from '../styles/styles.js'
 
-class Definitions extends React.Component {
+class DefinitionsList extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -35,7 +35,7 @@ class Definitions extends React.Component {
                     <p>{this.state.selected}</p>
                     <ul>
                         {arr.length ? arr.map((term, i) => (
-                            <li key={i}><Link to="">{term.node.frontmatter.title}</Link></li>
+                            <li key={i}><Link to={`${this.props.path}/where-to-find/${term.node.frontmatter.title[0]}/${term.node.frontmatter.title}`}>{term.node.frontmatter.title}</Link></li>
                         )) : 'No terms found.'}
                     </ul>
                 </div>
@@ -44,4 +44,4 @@ class Definitions extends React.Component {
     }
 }
 
-export default Definitions
+export default DefinitionsList
