@@ -38,6 +38,9 @@ export const clearLink = {
 }
 
 export const active = {
+    ':before': {
+        transform: 'scale(-1)'
+    },
     ':after': {
         transformOrigin: 'left !important',
         transform: 'scaleX(1) !important',
@@ -161,7 +164,8 @@ export const dropdownLink = {
             width: 10,
             height: '1em',
             background: `url(${arrowIcon}) no-repeat center center`,
-            backgroundSize: '100%'
+            backgroundSize: '100%',
+            transition: 'all .2s ease-in-out',
         },
     },
     '& ul': {
@@ -200,7 +204,7 @@ export const dropdownLink = {
 
 export const header = {
     textAlign: 'center',
-    padding: '200px 32px',
+    padding: '160px 32px 200px',
     background: `url(${headerImg}) bottom no-repeat`,
     backgroundSize: '100%',
 
@@ -258,7 +262,7 @@ export const heartIcon = {
 }
 
 export const sectionHeader = {
-    fontSize: '1em',
+    fontSize: '1.2em',
     fontWeight: 600,
     border: `3px solid ${variables.black}`,
     display: 'inline-block',
