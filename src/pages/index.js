@@ -13,12 +13,12 @@ const IndexPage = () => (
     <div css={styles.container}>
       <SectionHeader title="Graphing Calculators" />
       <div css={styles.calcLinkWrapper}>
-        <CalcLink title="TI-84 Plus" href="ti-84-plus" color={styles.bgBlue} />
-        <CalcLink title="TI-84 CE" href="ti-84-ce" color={styles.bgRed} />
+        <CalcLink title="TI-84 Plus" href="ti-84-plus/" color={styles.bgBlue} />
+        <CalcLink title="TI-84 CE" href="ti-84-ce/" color={styles.bgRed} />
       </div>
       <div css={styles.calcLinkWrapper}>
-        <CalcLink title="TI-83 Plus" href="ti-83-plus" color={styles.bgGreen} />
-        <CalcLink title="TI-89 Titanium" href="ti-89-titanium" color={styles.bgPurple} />
+        <CalcLink title="TI-83 Plus" href="ti-83-plus/" color={styles.bgGreen} />
+        <CalcLink title="TI-89 Titanium" href="ti-89-titanium/" color={styles.bgPurple} />
       </div>
     </div>
   </Layout>
