@@ -7,38 +7,64 @@ import logoWhite from '../images/logo-white.png'
 
 import Dropdown from './dropdown'
 
-const Nav = () => (
-  <div css={styles.nav}>
-    <Link to="/">
-      <img src={logo} alt="InfinityCalcs" css={styles.navLogo} />
-      <img src={logoWhite} alt="InfinityCalcs" css={[styles.navLogo, styles.navLogoMobile]} />
-    </Link>
-    <ul css={[styles.navLinks, styles.navLinksMobile]}>
-      <li>
-        <Dropdown title="Calculators">
-          <Link to="/ti-84-plus/">TI-84 Plus</Link>
-          <Link to="/ti-84-ce/">TI-84 CE</Link>
-          <Link to="/ti-83-plus/">TI-83 Plus</Link>
-          <Link to="/ti-89-titanium/">TI-89</Link>
-        </Dropdown>
-      </li>
-      <li>
+class Nav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+        open: false
+    };
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick(e) {
+    this.setState(state => ({
+      open: !state.open
+    }))
+  }
+
+  render() {
+    return (
+      <div css={this.state.open ? [styles.nav, styles.navOpen] : styles.nav}>
         <Link to="/">
-          Forum
+          {this.state.open ?
+            (<img src={logoWhite} alt="InfinityCalcs" css={[styles.navLogo, styles.navLogoMobile]} />) :
+            (<img src={logo} alt="InfinityCalcs" css={styles.navLogo} />)
+          }         
         </Link>
-      </li>
-      <li>
-        <Link to="/">
-          Blog
-        </Link>
-      </li>
-      <li>
-        <Link to="/">
-          Games
-        </Link>
-      </li>
-    </ul>
-  </div>
-)
+        <div onClick={this.handleClick} css={this.state.open ? [styles.hamburger, styles.hamburgerOpen] : styles.hamburger}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul css={this.state.open ? [styles.navLinks, styles.navLinksMobile, styles.navLinksMobileOpen] : [styles.navLinks, styles.navLinksMobile]}>
+          <li>
+            <Dropdown title="Calculators">
+              <Link to="/ti-84-plus/">TI-84 Plus</Link>
+              <Link to="/ti-84-ce/">TI-84 CE</Link>
+              <Link to="/ti-83-plus/">TI-83 Plus</Link>
+              <Link to="/ti-89-titanium/">TI-89</Link>
+            </Dropdown>
+          </li>
+          <li>
+            <Link to="/">
+              Forum
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              Games
+            </Link>
+          </li>
+        </ul>
+      </div>
+    )
+  }
+}
 
 export default Nav

@@ -102,19 +102,22 @@ export const nav = {
     '@media(max-width: 767px)': {
         padding: '24px 16px',
         position: 'relative',
-        background: variables.blue
     },
+}
+
+export const navOpen = {
+      '@media(max-width: 767px)': {
+        background: variables.blue
+    },  
 }
 
 export const navLogo = {   
     height: 42,
     margin: 0,
-     '@media(max-width: 767px)': {
-        display: 'none'
-     }
 }
 
 export const navLogoMobile = {
+    display: 'none',
     '@media(max-width: 767px)': {
         display: 'block'
      }
@@ -144,9 +147,67 @@ export const navLinks = {
     }
 }
 
-export const navLinksMobile = {
+export const hamburger = {
+    display: 'none',
+
     '@media(max-width: 767px)': {
         display: 'block',
+        width: '35px',
+        height: '35px',
+        position: 'absolute',
+        top: 32,
+        right: 16,
+        transform: 'rotate(0deg)',
+        transition: '.5s ease-in-out',
+        cursor: 'pointer',
+
+        '& span': {
+            display: 'block',
+            position: 'absolute',
+            height: 3,
+            width: '100%',
+            background: variables.black,
+            opacity: 1,
+            left: 0,
+            transform: 'rotate(0deg)',
+            transition: '.25s ease-in-out',
+
+            ':nth-of-type(1)': {
+                top: 0
+            },
+            ':nth-of-type(2), :nth-of-type(3)': {
+                top: 12
+            },
+            ':nth-of-type(4)': {
+                top: 24
+            }
+        }
+    }
+}
+
+export const hamburgerOpen = {
+    '@media(max-width: 767px)': {
+        '& span': {
+            background: variables.white,
+
+            ':nth-of-type(1), :nth-of-type(4)': {
+                top: 12,
+                width: '0%',
+                left: '50%',
+            },
+            ':nth-of-type(2)': {
+                transform: 'rotate(45deg)',
+            },
+            ':nth-of-type(3)': {
+                transform: 'rotate(-45deg)',
+            }
+        }
+    }
+}
+
+export const navLinksMobile = {
+    '@media(max-width: 767px)': {
+        display: 'none',
         float: 'none',
         textAlign: 'center',
         marginTop: '16px',
@@ -166,6 +227,12 @@ export const navLinksMobile = {
             }
         }
     },
+}
+
+export const navLinksMobileOpen = {
+    '@media(max-width: 767px)': {
+        display: 'block'
+    }
 }
 
 export const dropdownLink = {

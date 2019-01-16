@@ -16,22 +16,28 @@ class Dropdown extends React.Component {
 
     onMouseClick(e) {
         e.preventDefault()
-        this.setState(state => ({
-            active: !state.active
-        }))
+        if (window.innerWidth <= '767') {
+            this.setState(state => ({
+                active: !state.active
+            }));
+        }
     }
 
     onMouseEnter(e) {
         e.preventDefault()
-        this.setState(state => ({
-            active: true
-        }))
+        if (window.innerWidth > '767') {
+            this.setState(state => ({
+                active: true
+            }))
+        }
     }
     onMouseLeave(e) {
         e.preventDefault()
-        this.setState(state => ({
-            active: false
-        }))
+        if (window.innerWidth > '767') {
+            this.setState(state => ({
+                active: false
+            }))
+        }
     }
 
     render() {
