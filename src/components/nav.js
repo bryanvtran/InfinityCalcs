@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 
 import * as styles from '../styles/styles.js'
 import logo from '../images/logo.png'
+import logoWhite from '../images/logo-white.png'
 
 import Dropdown from './dropdown'
 
@@ -10,6 +11,7 @@ const Nav = () => (
   <div css={styles.nav}>
     <Link to="/">
       <img src={logo} alt="InfinityCalcs" css={styles.navLogo} />
+      <img src={logoWhite} alt="InfinityCalcs" css={[styles.navLogo, styles.navLogoMobile]} />
     </Link>
     <ul css={[styles.navLinks, styles.navLinksMobile]}>
       <li>
