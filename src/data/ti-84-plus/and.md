@@ -2,6 +2,6 @@
 title: "and"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-
-[I'm an inline-style link](https://www.google.com)
+1. Press *2ND  TEST*
+2. Slide over to *LOGIC*
+3. Press enter to find ***abs(***

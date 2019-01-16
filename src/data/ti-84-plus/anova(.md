@@ -2,7 +2,7 @@
 title: "ANOVA("
 ---
 
-**PRESS**:
-1. *STAT* to access the statistics menu
-2. TESTS submenu
-3. Scroll down to H to find ***ANOVA(***
+1. Press *STAT*
+2. Slide over to *LOGIC*
+3. Scroll down to *H* to find ***ANOVA(***
+  
