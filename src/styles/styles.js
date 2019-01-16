@@ -105,7 +105,7 @@ export const nav = {
     },
 }
 
-export const navLogo = {   
+export const navLogo = {
     height: 42,
     margin: 0
 }
@@ -236,7 +236,7 @@ export const footerBar = {
     padding: '0 32px',
     margin: '0 auto',
     marginBottom: '12px',
-        
+
     '@media(max-width: 767px)': {
         padding: '0 16px'
     },
@@ -324,12 +324,12 @@ export const calcHeader = {
     paddingTop: 100,
     paddingBottom: 100,
     textAlign: 'center',
-    background: variables.lightBlueBg, 
+    background: variables.lightBlueBg,
     '& h1': {
         position: 'relative',
         display: 'inline-block',
         marginBottom: 0,
-        
+
         ':after': {
             content: '""',
             background: `url(${underlineImg}) repeat-x`,
