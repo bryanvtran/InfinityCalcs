@@ -240,7 +240,7 @@ export const dropdownLink = {
     'li &': {
         paddingRight: 14
     },
-    '& button': {
+    '> a': {
         border: 'none',
         cursor: 'pointer',
         outline: 'none',
@@ -293,7 +293,7 @@ export const dropdownLink = {
 
 export const dropdownLinkMobile = {
      '@media(max-width: 767px)': {
-        '& button:before': {
+        '> a:before': {
             content: 'none'
         },
          '& ul': {

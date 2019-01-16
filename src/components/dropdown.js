@@ -43,7 +43,7 @@ class Dropdown extends React.Component {
     render() {
         return (
             <div onClick={this.onMouseClick} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} css={[styles.dropdownLink, styles.dropdownLinkMobile]}>
-                <button css={this.state.active ? styles.active : {}} href="#">{this.props.title}</button>
+                <a css={this.state.active ? styles.active : {}} href="/">{this.props.title}</a>
                 <ul style={this.state.active ? {display: 'block'} : {display: 'none'}}>
                     {React.Children.map(this.props.children, (child) => (<li>{child}</li>))}
                 </ul>
