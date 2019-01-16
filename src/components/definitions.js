@@ -39,7 +39,7 @@ class DefinitionsList extends React.Component {
                     <p>{this.state.selected}</p>
                     <ul>
                         {arr.length ? arr.map((term, i) => (
-                            <li key={i}><Link to={`${path}/where-to-find/${term.node.frontmatter.title[0]}/${term.node.frontmatter.title}`}>{term.node.frontmatter.title}</Link></li>
+                            <li key={i}><Link to={`${path}where-to-find/${term.node.frontmatter.title.toLowerCase()[0]}/${term.node.frontmatter.title.toLowerCase()}`}>{term.node.frontmatter.title}</Link></li>
                         )) : 'No terms found.'}
                     </ul>
                 </div>

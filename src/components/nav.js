@@ -14,10 +14,10 @@ const Nav = () => (
     <ul css={[styles.navLinks, styles.navLinksMobile]}>
       <li>
         <Dropdown title="Calculators">
-          <Link to="/ti-84-plus">TI-84 Plus</Link>
-          <Link to="/ti-84-ce">TI-84 CE</Link>
-          <Link to="/ti-83-plus">TI-83 Plus</Link>
-          <Link to="/ti-89-titanium">TI-89</Link>
+          <Link to="/ti-84-plus/">TI-84 Plus</Link>
+          <Link to="/ti-84-ce/">TI-84 CE</Link>
+          <Link to="/ti-83-plus/">TI-83 Plus</Link>
+          <Link to="/ti-89-titanium/">TI-89</Link>
         </Dropdown>
       </li>
       <li>
