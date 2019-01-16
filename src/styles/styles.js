@@ -101,13 +101,23 @@ export const nav = {
 
     '@media(max-width: 767px)': {
         padding: '24px 16px',
-        position: 'relative'
+        position: 'relative',
+        background: variables.blue
     },
 }
 
 export const navLogo = {   
     height: 42,
-    margin: 0
+    margin: 0,
+     '@media(max-width: 767px)': {
+        display: 'none'
+     }
+}
+
+export const navLogoMobile = {
+    '@media(max-width: 767px)': {
+        display: 'block'
+     }
 }
 
 export const navLinks = {
@@ -136,12 +146,24 @@ export const navLinks = {
 
 export const navLinksMobile = {
     '@media(max-width: 767px)': {
-        display: 'none',
+        display: 'block',
         float: 'none',
         textAlign: 'center',
+        marginTop: '16px',
 
         '& li': {
-            display: 'block'
+            display: 'block',
+            fontWeight: '300',
+            fontSize: '1.5em',
+            padding: '12px 16px',
+
+            ':last-of-type': {
+                paddingRight: '16px'
+            },
+
+            '& a, & button': {
+                color: variables.white,
+            }
         }
     },
 }
@@ -200,6 +222,35 @@ export const dropdownLink = {
             }
         }
     },
+}
+
+export const dropdownLinkMobile = {
+     '@media(max-width: 767px)': {
+        '& button:before': {
+            content: 'none'
+        },
+         '& ul': {
+            display: 'block',
+            position: 'relative',
+            width: '100%',
+            background: 'transparent',
+            border: 'none',
+            padding: 0,
+            left: 0,
+
+            '& li': {
+                width: '100%',
+                padding: '8px 0',
+                fontSize: '1em',
+                lineHeight: 1.2,
+                border: 'none',
+
+                ':last-of-type': {
+                    paddingRight: '0'
+                },
+            }
+         }
+     }
 }
 
 export const header = {
@@ -419,7 +470,7 @@ export const definitionsList = {
                 transform: 'rotate(0)',
             },
             '& .definition': {
-                display: 'block'
+                display: 'block',
             }
         }
     }
@@ -446,6 +497,16 @@ export const definition = {
         padding: '1em',
         '& p': {
             marginBottom: '1em',
+        },
+        '& em': {
+            fontStyle: 'normal',
+            fontWeight: 700,
+            color: variables.teal
+        },
+        '& strong > em': {
+            fontStyle: 'normal',
+            fontWeight: 700,
+            color: variables.lightGreen
         },
         '*:last-child': {
             marginBottom: 0

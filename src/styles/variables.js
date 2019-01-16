@@ -7,6 +7,7 @@ const variables = {
     lightBlueBg: '#DBF5FA',
     red: '#EF8087',
     green: '#63CC9F',
+    lightGreen: '#89D72D',
     purple: '#9589F0'
 }
 
