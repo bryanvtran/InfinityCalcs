@@ -3,4 +3,4 @@ title: "▶Dec"
 ---
 
 1. Press *MATH*
-2. Press enter to get ***▶Dec***
+2. Scroll down to ***▶Dec***
