@@ -24,8 +24,8 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Enter website description' },
-            { name: 'keywords', content: 'graphing calculator' },
+            { name: 'description', content: 'InfinityCalcs is the leading source online for information on graphing calculators. Tutorial videos, games, and more all from one site.' },
+            { name: 'keywords', content: 'graphing calculator, ti-84, ti 84' },
           ]}
         >
           <html lang="en" />
