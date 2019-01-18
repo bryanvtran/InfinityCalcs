@@ -116,11 +116,8 @@ export const navLogo = {
     margin: 0,
 }
 
-export const navLogoMobile = {
-    display: 'none',
-    '@media(max-width: 767px)': {
-        display: 'block'
-     }
+export const navLogoInvert = {
+    filter: 'invert(1)',
 }
 
 export const navLinks = {

@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 
 import * as styles from '../styles/styles.js'
 import logo from '../images/logo.png'
-import logoWhite from '../images/logo-white.png'
 
 import Dropdown from './dropdown'
 
@@ -26,10 +25,7 @@ class Nav extends React.Component {
     return (
       <div css={this.state.open ? [styles.nav, styles.navOpen] : styles.nav}>
         <Link to="/">
-          {this.state.open ?
-            (<img src={logoWhite} alt="InfinityCalcs" css={[styles.navLogo, styles.navLogoMobile]} />) :
-            (<img src={logo} alt="InfinityCalcs" css={styles.navLogo} />)
-          }         
+            <img src={logo} alt="InfinityCalcs" css={this.state.open ? [styles.navLogo, styles.navLogoInvert] : styles.navLogo} />
         </Link>
         <div onClick={this.handleClick} css={this.state.open ? [styles.hamburger, styles.hamburgerOpen] : styles.hamburger}>
           <span></span>
