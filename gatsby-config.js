@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/InfinityCalcs",
+  pathPrefix: "",
   siteMetadata: {
     title: 'InfinityCalcs',
   },
