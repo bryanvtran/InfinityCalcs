@@ -3,4 +3,4 @@ title: "GBD"
 ---
 
 1. Press *VARS*
-2. Scroll down to ***GDB***
+2. Scroll down to find ***GDB***

@@ -3,4 +3,4 @@ title: "Statistics"
 ---
 
 1. Press *VARS*
-2. Scroll down to ***Statistics***
+2. Scroll down to find ***Statistics***
