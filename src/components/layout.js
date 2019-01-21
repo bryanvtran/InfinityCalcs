@@ -24,8 +24,8 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'InfinityCalcs is the leading source online for information on graphing calculators. Tutorial videos, games, and more all from one site.' },
-            { name: 'keywords', content: 'graphing calculator, ti-84, ti 84' },
+            { name: 'description', content: 'Short and to the point information on anything related to graphing calculators. Period. Tutorials, games, and more.' },
+            { name: 'keywords', content: 'graphing calculator, texas instruments, ti-84, ti 84, ti 84 ce, ti 84 plus, ti 83, SAT, ACT' },
           ]}
         >
           <html lang="en" />

@@ -12,7 +12,7 @@ const Footer = () => (
       <img src={youtubeLogo} alt="YouTube" css={styles.youtubeImg} />
     </a>
     <p>
-      &copy; 2018 Infinity Calcs | Made with <img src={heartIcon} alt="<3" css={styles.heartIcon}/>
+      &copy; 2019 Infinity Calcs | Made with <img src={heartIcon} alt="<3" css={styles.heartIcon}/>
     </p>
   </div>
 )
