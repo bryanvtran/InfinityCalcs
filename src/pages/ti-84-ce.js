@@ -7,6 +7,16 @@ import Definitions from '../components/definitions'
 
 import * as styles from '../styles/styles.js'
 
+import distanceFormulaPicture from '../images/distanceformula.png'
+import picture2 from
+
+const imageCss = {
+  height: 100,
+  width: 100
+}
+
+
+
 const Ti84Ce = ({ data, ...props }) => {
   const terms = data.allMarkdownRemark.edges.sort(function (a, b) {
     return a.node.frontmatter.title.toLowerCase().localeCompare(b.node.frontmatter.title.toLowerCase());
@@ -61,7 +71,7 @@ const Ti84Ce = ({ data, ...props }) => {
               <div className="wrapper">
                 <div onClick={toggleDefinition} className="title">Distance Formula</div>
                 <div className="definition">
-                  <p>Formula</p>
+                  <p><img css={imageCss} src={distanceFormulaPicture}/></p>
                   <p>Youtube Video</p>
                 </div>
               </div>
