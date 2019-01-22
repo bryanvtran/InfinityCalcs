@@ -12,7 +12,7 @@ import quadraticFormulaPicture from '../images/quadraticformula.png'
 import distanceFormulaPicture from '../images/distanceformula.png'
 
 const formulaCss = {
-  height: 100,
+  height: 40,
   width: 'auto'
 }
 
