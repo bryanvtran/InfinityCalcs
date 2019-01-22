@@ -10,7 +10,7 @@ import * as styles from '../styles/styles.js'
 import distanceFormulaPicture from '../images/distanceformula.png'
 
 const imageCss = {
-  height: 100,
+  height: 50,
   width: 'auto'
 }
 
