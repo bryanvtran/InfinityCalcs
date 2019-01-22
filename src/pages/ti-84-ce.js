@@ -12,7 +12,6 @@ import distanceFormulaPicture from '../images/distanceformula.png'
 const forumulaCss = {
   height: 35,
   width: 'auto',
-  padding: 8
 }
 
 const Ti84Ce = ({ data, ...props }) => {

@@ -14,7 +14,6 @@ import distanceFormulaPicture from '../images/distanceformula.png'
 const formulaCss = {
   height: 35,
   width: 'auto',
-  padding: 5
 }
 
 const Ti84Plus = ({ data, ...props }) => {
