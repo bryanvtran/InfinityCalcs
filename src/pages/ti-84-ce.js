@@ -10,7 +10,7 @@ import * as styles from '../styles/styles.js'
 import distanceFormulaPicture from '../images/distanceformula.png'
 
 const imageCss = {
-  height: 50,
+  height: 30,
   width: 'auto'
 }
 
@@ -71,7 +71,7 @@ const Ti84Ce = ({ data, ...props }) => {
                 <div onClick={toggleDefinition} className="title">Distance Formula</div>
                 <div className="definition">
                   <p><img css={imageCss} src={distanceFormulaPicture}/></p>
-                  <p>Youtube Video</p>
+                  <p><iframe width="560" height="315" src="https://www.youtube.com/embed/5VLQFmXqmko" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
                 </div>
               </div>
             </div>
