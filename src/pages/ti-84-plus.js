@@ -12,8 +12,8 @@ import quadraticFormulaPicture from '../images/quadraticformula.png'
 import distanceFormulaPicture from '../images/distanceformula.png'
 
 const formulaCss = {
-  height: 'auto',
-  width: 100,
+  height: 100,
+  width: 'auto'
 }
 
 const Ti84Plus = ({ data, ...props }) => {
@@ -57,14 +57,14 @@ const Ti84Plus = ({ data, ...props }) => {
                 <div onClick={toggleDefinition} className="title">Mid-Point Formula</div>
                 <div className="definition">
                   <p><img css={formulaCss} src={midpointFormulaPicture}/></p>
-                  <p>Youtube Video</p>
+                  <p><iframe width="560" height="315" src="https://www.youtube.com/embed/7k-kjx6s2Gk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
                 </div>
               </div>
               <div className="wrapper">
                 <div onClick={toggleDefinition} className="title">Quadratic Formula</div>
                 <div className="definition">
                   <p><img css={formulaCss} src={quadraticFormulaPicture}/></p>
-                  <p>Youtube Video</p>
+                  <p><iframe width="560" height="315" src="https://www.youtube.com/embed/9JOnVkrTiwg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
                 </div>
               </div>
               <div className="wrapper">
