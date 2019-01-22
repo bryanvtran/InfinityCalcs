@@ -8,7 +8,6 @@ import Definitions from '../components/definitions'
 import * as styles from '../styles/styles.js'
 
 import distanceFormulaPicture from '../images/distanceformula.png'
-import picture2 from
 
 const imageCss = {
   height: 100,
