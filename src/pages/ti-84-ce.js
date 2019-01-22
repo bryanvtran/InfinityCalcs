@@ -9,13 +9,11 @@ import * as styles from '../styles/styles.js'
 
 import distanceFormulaPicture from '../images/distanceformula.png'
 
-const imageCss = {
+const forumulaCss = {
   height: 35,
   width: 'auto',
-  padding: 5
+  padding: 8
 }
-
-
 
 const Ti84Ce = ({ data, ...props }) => {
   const terms = data.allMarkdownRemark.edges.sort(function (a, b) {
@@ -71,7 +69,7 @@ const Ti84Ce = ({ data, ...props }) => {
               <div className="wrapper">
                 <div onClick={toggleDefinition} className="title">Distance Formula</div>
                 <div className="definition">
-                  <p><img css={imageCss} src={distanceFormulaPicture}/></p>
+                  <p><img css={forumulaCss} src={distanceFormulaPicture}/></p>
                   <p><iframe width="560" height="315" src="https://www.youtube.com/embed/5VLQFmXqmko" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
                 </div>
               </div>
