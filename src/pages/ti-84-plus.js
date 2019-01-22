@@ -11,7 +11,7 @@ import midpointFormulaPicture from '../images/midpointformula.png'
 import quadraticFormulaPicture from '../images/quadraticformula.png'
 import distanceFormulaPicture from '../images/distanceformula.png'
 
-const forumulaCss = {
+const formulaCss = {
   height: 35,
   width: 'auto',
   padding: 8
