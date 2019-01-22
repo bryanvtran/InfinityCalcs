@@ -63,7 +63,7 @@ const Ti84Plus = ({ data, ...props }) => {
               <div className="wrapper">
                 <div onClick={toggleDefinition} className="title">Quadratic Formula</div>
                 <div className="definition">
-                  <p><img height="75" src="/images/quadraticformula.png"></p>
+                  <img src="/images/quadraticformula.png" height="75">
                   <p><iframe width="560" height="315" src="https://www.youtube.com/embed/9JOnVkrTiwg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
                 </div>
               </div>
