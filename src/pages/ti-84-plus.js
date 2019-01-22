@@ -8,7 +8,7 @@ import Definitions from '../components/definitions'
 import * as styles from '../styles/styles.js'
 
 import midpointFormulaPicture from '../images/midpointformula.png'
-import quadraticFormulaPicture from '../images/quadraticformula.png'
+// import quadraticFormulaPicture from '../images/quadraticformula.png'
 import distanceFormulaPicture from '../images/distanceformula.png'
 
 const formulaCss = {
@@ -63,7 +63,7 @@ const Ti84Plus = ({ data, ...props }) => {
               <div className="wrapper">
                 <div onClick={toggleDefinition} className="title">Quadratic Formula</div>
                 <div className="definition">
-                  <p><img css={formulaCss} src={quadraticFormulaPicture}/></p>
+                  <p><img src="images/quadraticformula.png" height="50"/></p>
                   <p><iframe width="560" height="315" src="https://www.youtube.com/embed/9JOnVkrTiwg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
                 </div>
               </div>
