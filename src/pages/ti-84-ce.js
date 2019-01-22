@@ -12,6 +12,7 @@ import distanceFormulaPicture from '../images/distanceformula.png'
 const imageCss = {
   height: 30,
   width: 'auto'
+  padding: 3,
 }
 
 
