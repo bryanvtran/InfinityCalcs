@@ -12,8 +12,8 @@ import quadraticFormulaPicture from '../images/quadraticformula.png'
 import distanceFormulaPicture from '../images/distanceformula.png'
 
 const formulaCss = {
-  height: 35,
-  width: 'auto',
+  height: 'auto',
+  width: 100,
 }
 
 const Ti84Plus = ({ data, ...props }) => {
