@@ -319,7 +319,7 @@ export const dropdownLinkMobile = {
 
 export const header = {
     textAlign: 'center',
-    padding: '100px 32px 200px',
+    padding: '150px 32px 200px',
     background: `url(${headerImg}) bottom no-repeat`,
     backgroundSize: '100%',
 
