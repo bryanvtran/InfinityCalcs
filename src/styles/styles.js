@@ -108,10 +108,10 @@ export const nav = {
 export const navOpen = {
       '@media(max-width: 767px)': {
         background: variables.blue
-    },  
+    },
 }
 
-export const navLogo = {   
+export const navLogo = {
     height: 42,
     margin: 0,
 }
@@ -379,6 +379,7 @@ export const heartIcon = {
 export const sectionHeader = {
     fontSize: '1.2em',
     fontWeight: 600,
+    color: variables.black,
     border: `3px solid ${variables.black}`,
     display: 'inline-block',
     boxShadow: '2px 2px 4px 0 rgba(0,0,0,0.50)',
