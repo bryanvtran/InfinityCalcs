@@ -377,7 +377,7 @@ export const heartIcon = {
 }
 
 export const sectionHeader = {
-    fontSize: '1.5em',
+    fontSize: '1.4em',
     fontWeight: 600,
     color: variables.black,
     border: `3px solid ${variables.black}`,
