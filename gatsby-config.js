@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'InfinityCalcs',
+    title: 'Infinity Calcs',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
