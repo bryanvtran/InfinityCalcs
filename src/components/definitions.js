@@ -7,8 +7,7 @@ class DefinitionsList extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            selected: 'A',
-            
+            selected: '*',
         }
         this.setSelected = this.setSelected.bind(this)
     }
@@ -20,26 +19,44 @@ class DefinitionsList extends React.Component {
     }
 
     render() {
+        const currentLetterTitle = this.state.selected === '*' ? 'Ops' : this.state.selected === '!' ? '#' : this.state.selected
+
         // path prefix fix
         const split = this.props.path.split('/InfinityCalcs')
         const path = split[split.length-1]
 
         const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
-        const arr = this.props.terms.filter((term) => term.node.frontmatter.title.toUpperCase().startsWith(this.state.selected))
+
+        // show all by default
+        let arr = this.props.terms
+
+        if (this.state.selected === '*') {
+            // starts with an op (anything not an number or letter)
+            arr = this.props.terms.filter((term) => term.node.frontmatter.title.match(/^\W/))
+        }
+        else if (this.state.selected === '!') {
+            // starts with a number
+            arr = this.props.terms.filter((term) => term.node.frontmatter.title.match(/^\d/))
+        }
+        else if (this.state.selected !== 'All') {
+            arr = this.props.terms.filter((term) => term.node.frontmatter.title.toUpperCase().startsWith(this.state.selected))
+        }
 
         return (
             <>
                 <div css={styles.definitionsNav}>
                     <ul>
-                        {letters.map((letter, i) => (<li key={i}> <span css={this.state.selected === letter ? styles.selected : {}} onClick={(e) => this.setSelected(letter)}>{letter}</span> |</li>))}
+                        <li><span css={this.state.selected === '*' && styles.selected} onClick={(e) => this.setSelected('*')}>Ops</span> |</li>
+                        <li> <span css={this.state.selected === '!' && styles.selected} onClick={(e) => this.setSelected('!')}>#</span> |</li>
+                        {letters.map((letter, i) => (<li key={i}> <span css={this.state.selected === letter && styles.selected} onClick={(e) => this.setSelected(letter)}>{letter}</span> |</li>))}
                         <li css={styles.textSmall}> <Link to={path+'/where-to-find/'}>See all</Link></li>
                     </ul>
                 </div>
                 <div css={styles.definitions}>
-                    <p>{this.state.selected}</p>
+                    <p>{currentLetterTitle}</p>
                     <ul>
                         {arr.length ? arr.map((term, i) => (
-                            <li key={i}><Link to={`${path}where-to-find/${term.node.frontmatter.title.toLowerCase()[0]}/${term.node.frontmatter.title.toLowerCase()}`}>{term.node.frontmatter.title}</Link></li>
+                            <li key={i}><Link to={`${path}where-to-find/?search=${term.node.frontmatter.title}`}>{term.node.frontmatter.title}</Link></li>
                         )) : 'No terms found.'}
                     </ul>
                 </div>

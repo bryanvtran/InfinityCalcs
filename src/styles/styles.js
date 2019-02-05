@@ -543,9 +543,7 @@ export const definitionsList = {
 
 export const definition = {
     '& .term': {
-        '> a': {
-            ...clearLink
-        },
+        cursor: 'pointer',
         ':before': {
             content: '""',
             background: `url(${arrowIcon}) no-repeat center center`,

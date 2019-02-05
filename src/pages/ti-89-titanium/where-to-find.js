@@ -17,7 +17,7 @@ const WhereToFind = ({data, ...props}) => {
             <CalcLayout title="TI-89 Titanium">
                 <div css={[styles.container, styles.calcContainer, styles.whereToFindContainer]}>
                     <h2>Where To Find…</h2>
-                    <DefinitionsList path={props.location.pathname} terms={terms} />
+                     <DefinitionsList location={props.location} terms={terms} />
                 </div>
             </CalcLayout>
         </Layout>
