@@ -29,8 +29,13 @@ class DefinitionsList extends React.Component {
     }
 
     render() {
-        const currentLetter = (this.state.search && this.state.search[0].toUpperCase()) || 'All'
-        const currentLetterTitle = currentLetter === '*' ? 'Ops' : currentLetter === '!' ? '#' : currentLetter
+        let currentLetter = (this.state.search && this.state.search[0].toUpperCase()) || 'All'
+        if (currentLetter !== '@' && currentLetter.match(/^\W/)) {
+            currentLetter = '*'
+        } else if (currentLetter.match(/^\d/)) {
+            currentLetter = '@'
+        }
+        const currentLetterTitle = currentLetter === '*' ? 'Ops' : currentLetter === '@' ? '#' : currentLetter
         
         const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
         // show all by default
@@ -40,7 +45,7 @@ class DefinitionsList extends React.Component {
             // starts with an op (anything not an number or letter)
             arr = this.props.terms.filter((term) => term.node.frontmatter.title.match(/^\W/))
         }
-        else if (currentLetter === '!') {
+        else if (currentLetter === '@') {
             // starts with a number
             arr = this.props.terms.filter((term) => term.node.frontmatter.title.match(/^\d/))
         }
@@ -53,7 +58,7 @@ class DefinitionsList extends React.Component {
                 <div css={styles.definitionsNav}>
                     <ul>
                         <li><span css={currentLetter === '*' && styles.selected}><Link to={`${this.state.pathname}?search=*`}>Ops</Link></span> |</li>
-                        <li> <span css={currentLetter === '!' && styles.selected}><Link to={`${this.state.pathname}?search=!`}>#</Link></span> |</li>
+                        <li> <span css={currentLetter === '@' && styles.selected}><Link to={`${this.state.pathname}?search=@`}>#</Link></span> |</li>
                         {letters.map((letter, i) => (<li key={i}> <span css={currentLetter === letter && styles.selected}><Link to={`${this.state.pathname}?search=${letter}`}>{letter}</Link></span> |</li>))}
                         <li css={{paddingLeft: 4}}><span css={currentLetter === 'All' && styles.selected}><Link to={this.state.pathname}>See all</Link></span></li>
                     </ul>

@@ -19,7 +19,7 @@ class DefinitionsList extends React.Component {
     }
 
     render() {
-        const currentLetterTitle = this.state.selected === '*' ? 'Ops' : this.state.selected === '!' ? '#' : this.state.selected
+        const currentLetterTitle = this.state.selected === '*' ? 'Ops' : this.state.selected === '@' ? '#' : this.state.selected
 
         // path prefix fix
         const split = this.props.path.split('/InfinityCalcs')
@@ -34,7 +34,7 @@ class DefinitionsList extends React.Component {
             // starts with an op (anything not an number or letter)
             arr = this.props.terms.filter((term) => term.node.frontmatter.title.match(/^\W/))
         }
-        else if (this.state.selected === '!') {
+        else if (this.state.selected === '@') {
             // starts with a number
             arr = this.props.terms.filter((term) => term.node.frontmatter.title.match(/^\d/))
         }
@@ -47,7 +47,7 @@ class DefinitionsList extends React.Component {
                 <div css={styles.definitionsNav}>
                     <ul>
                         <li><span css={this.state.selected === '*' && styles.selected} onClick={(e) => this.setSelected('*')}>Ops</span> |</li>
-                        <li> <span css={this.state.selected === '!' && styles.selected} onClick={(e) => this.setSelected('!')}>#</span> |</li>
+                        <li> <span css={this.state.selected === '@' && styles.selected} onClick={(e) => this.setSelected('@')}>#</span> |</li>
                         {letters.map((letter, i) => (<li key={i}> <span css={this.state.selected === letter && styles.selected} onClick={(e) => this.setSelected(letter)}>{letter}</span> |</li>))}
                         <li css={styles.textSmall}> <Link to={path+'/where-to-find/'}>See all</Link></li>
                     </ul>
