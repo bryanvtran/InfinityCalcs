@@ -26,7 +26,7 @@ class Definition extends React.Component {
 
     render() {
         const { term } = this.props
-        const css = this.state.opened ? [styles.definition] : [styles.definition, styles.hideDefinition]
+        const css = this.state.opened ? [styles.definition, styles.showDefinition] : [styles.definition, styles.hideDefinition]
         return (
             <li css={css}>
                 <div onClick={this.toggleDefinition} className="term">

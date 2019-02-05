@@ -8,6 +8,7 @@ import * as styles from '../styles/styles.js'
 class DefinitionsList extends React.Component {
     constructor(props) {
         super(props)
+        console.log('got props'+props)
         
         this.state = {
             pathname: props.location.pathname,
@@ -25,16 +26,19 @@ class DefinitionsList extends React.Component {
     }
 
     UNSAFE_componentWillReceiveProps(nextProps) {
+        console.log('recieve props')
         this.updateTermState(nextProps);
     }
 
     render() {
+        console.log(this.state);
         let currentLetter = (this.state.search && this.state.search[0].toUpperCase()) || 'All'
         if (currentLetter !== '@' && currentLetter.match(/^\W/)) {
             currentLetter = '*'
         } else if (currentLetter.match(/^\d/)) {
             currentLetter = '@'
         }
+        console.log(currentLetter);
         const currentLetterTitle = currentLetter === '*' ? 'Ops' : currentLetter === '@' ? '#' : currentLetter
         
         const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
