@@ -46,7 +46,7 @@ class DefinitionsList extends React.Component {
             <>
                 <div css={styles.definitionsNav}>
                     <ul>
-                        <li><span css={this.state.selected === '*' && styles.selected} onClick={(e) => this.setSelected('*')}>Ops</span> |</li>
+                        <li><span css={this.state.selected === '*' && styles.selected} onClick={(e) => this.setSelected('*')}>Operations</span> |</li>
                         <li> <span css={this.state.selected === '@' && styles.selected} onClick={(e) => this.setSelected('@')}>#</span> |</li>
                         {letters.map((letter, i) => (<li key={i}> <span css={this.state.selected === letter && styles.selected} onClick={(e) => this.setSelected(letter)}>{letter}</span> |</li>))}
                         <li css={styles.textSmall}> <Link to={path+'/where-to-find/'}>See all</Link></li>
