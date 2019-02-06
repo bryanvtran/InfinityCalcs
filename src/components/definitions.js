@@ -19,7 +19,7 @@ class DefinitionsList extends React.Component {
     }
 
     render() {
-        const currentLetterTitle = this.state.selected === '*' ? 'Ops' : this.state.selected === '@' ? '#' : this.state.selected
+        const currentLetterTitle = this.state.selected === '*' ? 'Operations' : this.state.selected === '@' ? '#' : this.state.selected
 
         // path prefix fix
         const split = this.props.path.split('/InfinityCalcs')

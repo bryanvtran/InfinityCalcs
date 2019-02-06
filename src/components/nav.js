@@ -25,7 +25,7 @@ class Nav extends React.Component {
     return (
       <div css={this.state.open ? [styles.nav, styles.navOpen] : styles.nav}>
         <Link to="/">
-            <img src={logo} alt="InfinityCalcs" css={this.state.open ? [styles.navLogo, styles.navLogoInvert] : styles.navLogo} />
+            <img src={logo} alt="Infinity Calcs" css={this.state.open ? [styles.navLogo, styles.navLogoInvert] : styles.navLogo} />
         </Link>
         <div onClick={this.handleClick} css={this.state.open ? [styles.hamburger, styles.hamburgerOpen] : styles.hamburger}>
           <span></span>
