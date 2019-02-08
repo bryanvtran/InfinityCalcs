@@ -22,6 +22,12 @@ module.exports = {
         ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
+        {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-61451252-2",
+      },
+    },
     `gatsby-transformer-remark`,
     'gatsby-transformer-sharp',
     `gatsby-plugin-force-trailing-slashes`,
