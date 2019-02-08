@@ -9,7 +9,7 @@ class DefinitionsList extends React.Component {
     constructor(props) {
         super(props)
         console.log('got props'+props)
-        
+
         this.state = {
             pathname: props.location.pathname,
             search: props.location.search ? props.location.search.split('?search=')[1] : '',
@@ -39,8 +39,8 @@ class DefinitionsList extends React.Component {
             currentLetter = '@'
         }
         console.log(currentLetter);
-        const currentLetterTitle = currentLetter === '*' ? 'Ops' : currentLetter === '@' ? '#' : currentLetter
-        
+        const currentLetterTitle = currentLetter === '*' ? 'Operations' : currentLetter === '@' ? '#' : currentLetter
+
         const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
         // show all by default
         let arr = this.props.terms
@@ -56,12 +56,12 @@ class DefinitionsList extends React.Component {
         else if (currentLetter !== 'All') {
             arr = this.props.terms.filter((term) => term.node.frontmatter.title.toUpperCase().startsWith(currentLetter))
         }
-        
+
         return (
             <>
                 <div css={styles.definitionsNav}>
                     <ul>
-                        <li><span css={currentLetter === '*' && styles.selected}><Link to={`${this.state.pathname}?search=*`}>Ops</Link></span> |</li>
+                        <li><span css={currentLetter === '*' && styles.selected}><Link to={`${this.state.pathname}?search=*`}>Operations</Link></span> |</li>
                         <li> <span css={currentLetter === '@' && styles.selected}><Link to={`${this.state.pathname}?search=@`}>#</Link></span> |</li>
                         {letters.map((letter, i) => (<li key={i}> <span css={currentLetter === letter && styles.selected}><Link to={`${this.state.pathname}?search=${letter}`}>{letter}</Link></span> |</li>))}
                         <li css={{paddingLeft: 4}}><span css={currentLetter === 'All' && styles.selected}><Link to={this.state.pathname}>See all</Link></span></li>
