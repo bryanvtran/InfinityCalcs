@@ -10,6 +10,8 @@ import * as styles from '../styles/styles.js'
 import midpointFormulaPicture from '../images/midpointformula.png'
 import quadraticFormulaPicture from '../images/quadraticformula.png'
 import distanceFormulaPicture from '../images/distanceformula.png'
+import radicalsymbolPicture from '../images/radicalsymbol.png'
+import factoringPicture from '../images/factoring.png'
 
 const formulaCss = {
   height: 40,
@@ -74,10 +76,24 @@ const Ti84Plus = ({ data, ...props }) => {
                   <p><iframe width="560" height="315" src="https://www.youtube.com/embed/5VLQFmXqmko" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
                 </div>
               </div>
+              <div className="wrapper">
+                <div onClick={toggleDefinition} className="title">Simplifying Radicals</div>
+                <div className="definition">
+                  <p><img css={formulaCss} src={radicalsymbolPicture}/></p>
+                  <p><iframe width="560" height="315" src="https://www.youtube.com/embed/hOEwxOwg8d0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                </div>
+              </div>
+              <div className="wrapper">
+                <div onClick={toggleDefinition} className="title">Factoring Polynomials</div>
+                <div className="definition">
+                  <p><img css={formulaCss} src={factoringPicture}/></p>
+                  <p><iframe width="560" height="315" src="https://www.youtube.com/embed/LOWbmTWnM4w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                </div>
+              </div>
             </div>
           </div>
           <div css={[styles.container, styles.calcContainer, styles.noBorder]}>
-            ad goes here
+            anthony davis goes here
           </div>
       </CalcLayout>
     </Layout>
