@@ -8,7 +8,6 @@ import * as styles from '../styles/styles.js'
 class DefinitionsList extends React.Component {
     constructor(props) {
         super(props)
-        console.log('got props'+props)
 
         this.state = {
             pathname: props.location.pathname,
@@ -25,20 +24,19 @@ class DefinitionsList extends React.Component {
         })
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        console.log('recieve props')
-        this.updateTermState(nextProps);
+    componentDidUpdate(prevProps) {
+        if (this.props.location.search !== prevProps.location.search) {
+            this.updateTermState(this.props);
+        }
     }
 
     render() {
-        console.log(this.state);
         let currentLetter = (this.state.search && this.state.search[0].toUpperCase()) || 'All'
         if (currentLetter !== '@' && currentLetter.match(/^\W/)) {
             currentLetter = '*'
         } else if (currentLetter.match(/^\d/)) {
             currentLetter = '@'
         }
-        console.log(currentLetter);
         const currentLetterTitle = currentLetter === '*' ? 'Operations' : currentLetter === '@' ? '#' : currentLetter
 
         const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
@@ -71,7 +69,7 @@ class DefinitionsList extends React.Component {
                     <p className="title">{currentLetterTitle}</p>
                     <ul>
                         {arr.length ? arr.map((term, i) => (
-                            <Definition key={i} term={term} opened={this.state.search.toLowerCase() === term.node.frontmatter.title.toLowerCase()} />
+                            <Definition key={i} term={term} opened={decodeURIComponent(this.state.search.toLowerCase()) === term.node.frontmatter.title.toLowerCase()} />
                         )) : 'No terms found.'}
                     </ul>
                 </div>
