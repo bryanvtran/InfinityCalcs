@@ -3,6 +3,7 @@ import variables from './variables'
 import arrowIcon from '../images/arrow.png'
 import headerImg from '../images/header-bg.png'
 import underlineImg from '../images/underline.png'
+import whiteUnderlineImg from '../images/underline-white.png'
 
 export const defaultMobilePadding = {
     '@media(max-width: 767px)': {
@@ -18,6 +19,10 @@ export const defaultPadding = {
 export const link = {
     color: variables.lightBlue,
     textDecoration: 'underline',
+}
+
+export const linkGreen = {
+    color: variables.seafoamGreen
 }
 
 export const center = {
@@ -82,6 +87,12 @@ export const underline = {
         width: '30px',
         backgroundColor: variables.lightBlue,
     },
+}
+
+export const underlineTeal = {
+    ':after': {
+        backgroundColor: variables.seafoamGreen
+    }
 }
 
 export const selected = {
@@ -404,6 +415,10 @@ export const bgPurple = {
     backgroundColor: variables.purple
 }
 
+export const bgTeal = {
+    background: variables.seafoamGreen,
+}
+
 export const calcLinkWrapper = {
     width: '80%',
     margin: '0 auto',
@@ -459,6 +474,20 @@ export const calcHeader = {
     }
 }
 
+export const gameHeader = {
+    background: variables.seafoamGreen,
+    '& h1:after': {
+        content: '""',
+        background: `url(${whiteUnderlineImg}) repeat-x`,
+        height: 4,
+        backgroundSize: 'contain',
+        width: '100%',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+    }
+}
+
 export const calcContainer = {
     borderBottom: `1px solid ${variables.black}`,
     '& h2': {
@@ -470,6 +499,12 @@ export const calcContainer = {
     '& p.body': {
         width: '90%',
         margin: '0 auto 32px'
+    }
+}
+
+export const gameContainer = {
+    '& h2': {
+        ...underlineTeal
     }
 }
 
@@ -657,4 +692,37 @@ export const programming = {
             display: 'block'
         }
     }
+}
+
+export const gamesList = {
+    borderTop: `2px solid ${variables.black}`,
+    margin: '3em',
+    listStyle: 'none'
+}
+
+export const gamesListItem = {
+    padding: '.75em 0',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderBottom: `1px solid ${variables.gray}`,
+
+    '@media(max-width: 767px)': {
+        display: 'block'
+    }
+}
+
+export const gamesListItemCell = {
+    '@media(max-width: 767px)': {
+        marginBottom: '.5em'
+    }  
+}
+
+export const button = {
+    borderRadius: 6,
+    background: variables.seafoamGreen,
+    padding: '.5em 1.5em',
+    color: variables.white,
+    textDecoration: 'none',
+    display: 'inline-block',
 }
