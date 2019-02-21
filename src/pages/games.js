@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import CalcLayout from '../components/calc-layout'
@@ -7,7 +7,7 @@ import GamesList from '../components/games-list'
 
 import * as styles from '../styles/styles.js'
 
-const Games = () => (
+const Games = ({data}) => (
     <Layout>
         <CalcLayout title="Games" extraStyles={[styles.gameHeader]}>
             <div css={[styles.container, styles.calcContainer, styles.gameContainer]}>
@@ -19,10 +19,25 @@ const Games = () => (
             </div>
             <div css={[styles.container, styles.calcContainer, styles.gameContainer]}>
                 <h2>Popular Games</h2>
-                <GamesList />
+                <GamesList games={data.allFile.edges}/>
             </div>
         </CalcLayout>
     </Layout>
 )
 
 export default Games
+
+export const query = graphql`
+{
+  allFile(filter: { sourceInstanceName: { eq: "games" } }) {
+    edges {
+      node {
+        id,
+        name,
+        extension
+        publicURL,
+      }
+    }
+  }
+}
+`

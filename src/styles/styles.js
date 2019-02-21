@@ -42,6 +42,11 @@ export const clearLink = {
     textDecoration: 'none'
 }
 
+export const clearLinkWhite = {
+    color: variables.white,
+    textDecoration: 'none'
+}
+
 export const active = {
     ':before': {
         transform: 'scale(-1)'
@@ -701,9 +706,8 @@ export const gamesList = {
 }
 
 export const gamesListItem = {
-    padding: '.75em 0',
+    padding: '.5em 0',
     display: 'flex',
-    justifyContent: 'space-between',
     alignItems: 'center',
     borderBottom: `1px solid ${variables.gray}`,
 
@@ -713,6 +717,9 @@ export const gamesListItem = {
 }
 
 export const gamesListItemCell = {
+    flex: 1,
+    textAlign: 'center',
+
     '@media(max-width: 767px)': {
         marginBottom: '.5em'
     }  
