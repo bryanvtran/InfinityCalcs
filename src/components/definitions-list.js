@@ -70,7 +70,7 @@ class DefinitionsList extends React.Component {
                     <ul>
                         {arr.length ? arr.map((term, i) => (
                             <Definition key={i} term={term} opened={decodeURIComponent(this.state.search.toLowerCase()) === term.node.frontmatter.title.toLowerCase()} />
-                        )) : 'No terms found.'}
+                        )) : 'No terms.'}
                     </ul>
                 </div>
             </>

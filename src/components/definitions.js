@@ -57,7 +57,7 @@ class DefinitionsList extends React.Component {
                     <ul>
                         {arr.length ? arr.map((term, i) => (
                             <li key={i}><Link to={`${path}where-to-find/?search=${term.node.frontmatter.title}`}>{term.node.frontmatter.title}</Link></li>
-                        )) : 'No terms found.'}
+                        )) : 'No terms.'}
                     </ul>
                 </div>
             </>
