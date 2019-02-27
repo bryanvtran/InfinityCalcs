@@ -24,8 +24,8 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Short and to the point information on anything related to graphing calculators. Period. Tutorials, games, and more.' },
-            { name: 'keywords', content: 'graphing calculator, texas instruments, ti-84, ti 84, ti 84 ce, ti 84 plus, ti 83, SAT, ACT' },
+            { name: 'description', content: 'Thousands of students come to Infinity Calcs to find information on graphing calculator tutorials, games, programming and more.' },
+            { name: 'keywords', content: 'graphing calculator, texas instruments, ti-84, ti 84, ti 84 ce, ti 84 plus, ti 83,' },
           ]}
         >
           <html lang="en" />
