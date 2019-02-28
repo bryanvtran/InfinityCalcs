@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: 'Infinity Calcs',
+    siteUrl: `https://www.infinitycalcs.com`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-emotion`,
     },
