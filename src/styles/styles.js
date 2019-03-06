@@ -722,7 +722,7 @@ export const gamesListItemCell = {
 
     '@media(max-width: 767px)': {
         marginBottom: '.5em'
-    }  
+    }
 }
 
 export const button = {

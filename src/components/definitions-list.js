@@ -44,7 +44,7 @@ class DefinitionsList extends React.Component {
         let arr = this.props.terms
 
         if (currentLetter === '*') {
-            // starts with an op (anything not an number or letter)
+            // starts with an op (anything not a number or letter)
             arr = this.props.terms.filter((term) => term.node.frontmatter.title.match(/^\W/))
         }
         else if (currentLetter === '@') {
