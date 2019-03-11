@@ -68,7 +68,7 @@ const Ti83Plus = ({ data, ...props }) => {
             </div>
           </div>
           <div css={[styles.container, styles.calcContainer, styles.noBorder]}>
-            ad goes here
+            anthony davis goes here
           </div>
       </CalcLayout>
     </Layout>

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Infinity Calcs',
+    title: 'Infinity Calcs - TI 84 Games, Tutorials, and Programming',
     siteUrl: `https://www.infinitycalcs.com`,
   },
   plugins: [

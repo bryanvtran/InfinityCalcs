@@ -68,7 +68,7 @@ const Ti89Titanium = ({ data, ...props }) => {
             </div>
           </div>
           <div css={[styles.container, styles.calcContainer, styles.noBorder]}>
-            ad goes here
+            anthony davis goes here
           </div>
       </CalcLayout>
     </Layout>

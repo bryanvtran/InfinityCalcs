@@ -93,7 +93,7 @@ const Ti84Plus = ({ data, ...props }) => {
                 </div>
               </div>
               <div className="wrapper">
-                <div onClick={toggleDefinition} className="title">Pythagorean Theorem Program - Find Hypotenuse and Missing Leg</div>
+                <div onClick={toggleDefinition} className="title">Pythagorean Theorem Program - Finding the Hypotenuse and Missing Leg</div>
                 <div className="definition">
                   <p><img css={formulaCss} src={pythagoreanTheoremPicture}/></p>
                   <p><iframe width="560" height="315" src="https://www.youtube.com/embed/hDi5ZITe0qw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
