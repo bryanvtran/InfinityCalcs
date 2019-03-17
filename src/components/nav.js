@@ -44,12 +44,7 @@ class Nav extends React.Component {
           </li>
           <li>
             <Link to="/">
-              Forum
-            </Link>
-          </li>
-          <li>
-            <Link to="/">
-              Blog
+              Resources
             </Link>
           </li>
           <li>

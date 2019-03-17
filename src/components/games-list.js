@@ -12,7 +12,7 @@ const GamesList = ({ games }) => (
                     {node.name}
                 </div>
                 <div css={styles.gamesListItemCell}>
-                    Developer: Jane Doe
+                    Developer: Elon Musk
                 </div>
                 <div css={styles.gamesListItemCell}>
                     TI-84 PLUS, TI-84 CE

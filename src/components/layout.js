@@ -25,7 +25,7 @@ const Layout = ({ children }) => (
           title={data.site.siteMetadata.title}
           meta={[
             { name: 'description', content: 'Thousands of students come to Infinity Calcs to find information on TI 84 graphing calculator tutorials, games, programming and more.' },
-            { name: 'keywords', content: 'graphing calculator, texas instruments, games, ti-84, ti 84, ti 84 calculator, ti 84 ce, ti 84 plus, ti 83,' },
+            { name: 'keywords', content: 'graphing calculator, programming, texas instruments, games, ti-84, ti 84, ti 84 calculator, ti 84 ce, ti 84 plus, ti 83,' },
           ]}
         >
           <html lang="en" />
