@@ -1,6 +1,6 @@
 ---
 title: "How to Save Notes on Your Graphing Calculator (TI-84 Plus CE, TI-84 Plus, TI-83)"
-image: "./stock.jpeg"
+image: "./notes.png"
 video: "M0mGma9ZkXI"
 date: "2019-03-26"
 ---
