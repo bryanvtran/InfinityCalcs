@@ -43,7 +43,7 @@ class Nav extends React.Component {
             </Dropdown>
           </li>
           <li>
-            <Link to="/">
+            <Link to="/resources/">
               Resources
             </Link>
           </li>

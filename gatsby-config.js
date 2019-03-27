@@ -32,6 +32,14 @@ module.exports = {
         ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `resources`,
+        path: `${__dirname}/src/resources/`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
         {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

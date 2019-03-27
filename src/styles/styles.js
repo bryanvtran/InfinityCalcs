@@ -94,9 +94,15 @@ export const underline = {
     },
 }
 
-export const underlineTeal = {
+export const underlineGreen = {
     ':after': {
         backgroundColor: variables.seafoamGreen
+    }
+}
+
+export const underlineTeal = {
+    ':after': {
+        backgroundColor: variables.teal
     }
 }
 
@@ -493,6 +499,20 @@ export const gameHeader = {
     }
 }
 
+export const resourcesHeader = {
+    background: variables.teal,
+    '& h1:after': {
+        content: '""',
+        background: `url(${whiteUnderlineImg}) repeat-x`,
+        height: 4,
+        backgroundSize: 'contain',
+        width: '100%',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+    }
+}
+
 export const calcContainer = {
     borderBottom: `1px solid ${variables.black}`,
     '& h2': {
@@ -508,6 +528,12 @@ export const calcContainer = {
 }
 
 export const gameContainer = {
+    '& h2': {
+        ...underlineGreen
+    }
+}
+
+export const resourcesContainer = {
     '& h2': {
         ...underlineTeal
     }
@@ -732,4 +758,42 @@ export const button = {
     color: variables.white,
     textDecoration: 'none',
     display: 'inline-block',
+}
+
+export const resourcesItem = {
+    display: 'flex',
+    boxShadow: '1px 1px 4px 0 rgba(0,0,0,0.50)',
+    alignItems: 'center',
+    marginBottom: '2em'
+}
+
+export const resourcesItemImage = {
+    background: variables.gray,
+    width: '25%',
+    textAlign: 'center',
+    'img': {
+        margin: 0,
+        width: '100%',
+        objectFit: 'cover',
+        height: '120px'
+    }
+}
+
+export const resourcesItemTitle = {
+    width: '75%',
+    textAlign: 'center',
+    fontWeight: 500,
+    color: variables.black,
+}
+
+export const resourceContainer = {
+    'h2': {
+        fontSize: '1.5em',
+        marginBottom: '2em'
+    }
+}
+
+export const resourceVideo = {
+    textAlign: 'center',
+    marginBottom: '2em'
 }
