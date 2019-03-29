@@ -33,3 +33,6 @@ SAT Subject Tests
 If you want to use your computer to write notes and send them directly to your graphing calculator, take a look at the link below.
 
 Note: Remember to always ask you teacher if having notes are allowed to avoid suspicion of cheating.
+<br></br>
+
+**TI-84 CE, TI-84, TI-83, TI-89**
