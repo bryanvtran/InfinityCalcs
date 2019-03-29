@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://www.infinitycalcs.com/resources/How-to-Save-Notes-on-Your-Graphing-Calculator-(TI-84-Plus-CE-TI-84-Plus-TI-83)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.infinitycalcs.com/resources/Unboxing-the-TI-84-Plus-CE/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.infinitycalcs.com/resources/What-does-the-CE-stand-for-in-TI-84-Plus-CE/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.infinitycalcs.com/resources/How-to-Install-Games-on-your-TI-84-Plus-CE/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.infinitycalcs.com/resources/How-to-Find-Anything-on-Your-TI-84-PLUS-CE/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.infinitycalcs.com/resources/How-to-Find-Something-on-Your-TI-84-PLUS-CE/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.infinitycalcs.com/resources/How-to-Save-Notes-on-Your-Graphing-Calculator-(TI-84-Plus-CE-TI-84-Plus-TI-83)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.infinitycalcs.com/resources/How-to-Program-the-Mid-Point-Formula-on-Your-Graphing-Calculator/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.infinitycalcs.com/resources/How-to-Program-the-Distance-Formula-on-Your-Graphing-Calculator/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.infinitycalcs.com/resources/How-to-Program-the-Quadratic-Formula-on-Your-Graphing-Calculator/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.infinitycalcs.com/games/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.infinitycalcs.com/games/getting-started/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.infinitycalcs.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
