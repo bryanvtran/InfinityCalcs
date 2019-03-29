@@ -19,7 +19,7 @@ export default ({ data }) => {
                     </div>
                 )}
 
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <div css={styles.markdownStyles} dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
         </CalcLayout>
     </Layout>

@@ -110,6 +110,25 @@ export const selected = {
     borderBottom: `3px solid ${variables.lightBlue}`
 }
 
+export const markdownStyles = {
+    '& p': {
+        marginBottom: '1em',
+    },
+    '& em': {
+        fontStyle: 'normal',
+        fontWeight: 700,
+        color: variables.teal
+    },
+    '& strong > em': {
+        fontStyle: 'normal',
+        fontWeight: 700,
+        color: variables.lightGreen
+    },
+    '*:last-child': {
+        marginBottom: 0
+    }
+}
+
 export const container = {
     margin: '0 auto',
     maxWidth: 960,
@@ -624,22 +643,7 @@ export const definition = {
 
     '& .definition': {
         padding: '1em',
-        '& p': {
-            marginBottom: '1em',
-        },
-        '& em': {
-            fontStyle: 'normal',
-            fontWeight: 700,
-            color: variables.teal
-        },
-        '& strong > em': {
-            fontStyle: 'normal',
-            fontWeight: 700,
-            color: variables.lightGreen
-        },
-        '*:last-child': {
-            marginBottom: 0
-        }
+        ...markdownStyles
     }
 }
 
