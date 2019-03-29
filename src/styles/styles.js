@@ -762,9 +762,15 @@ export const button = {
 
 export const resourcesItem = {
     display: 'flex',
-    boxShadow: '1px 1px 4px 0 rgba(0,0,0,0.50)',
+    boxShadow: '1px 1px 2px 0 rgba(0,0,0,0.25)',
     alignItems: 'center',
-    marginBottom: '2em'
+    marginBottom: '2em',
+    lineHeight: 0,
+    transition: '.5s ease-in-out',
+
+    ':hover': {
+        boxShadow: '1px 1px 4px 0 rgba(0,0,0,0.5)',
+    }
 }
 
 export const resourcesItemImage = {
