@@ -10,7 +10,7 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
-        <CalcLayout title="Resources" extraStyles={[styles.resourcesHeader]}>
+        <CalcLayout title="Resources" titleHref="/resources/"extraStyles={[styles.resourcesHeader]}>
              <div css={[styles.container, styles.calcContainer, styles.resourceContainer]}>
                 <h2>{post.frontmatter.title}</h2>
                 {post.frontmatter.video && (

@@ -8,7 +8,7 @@ import * as styles from '../../styles/styles.js'
 
 const GettingStarted = () => (
     <Layout>
-        <CalcLayout title="Games" extraStyles={[styles.gameHeader]}>
+        <CalcLayout title="Games" titleHref="/games/" extraStyles={[styles.gameHeader]}>
           <div css={[styles.container, styles.calcContainer, styles.gameContainer]}>
             <h2>Getting Started</h2>
             <p className="body">Take a look at the guide below if you need some help on getting games on your graphing calculator.</p>

@@ -5,8 +5,8 @@ video: "M0mGma9ZkXI"
 date: "2019-03-26"
 ---
 
-Saving notes on your graphing calculator can help you save valuable time when studying concepts that require vast amounts of memorization. Sometimes you don’t have time to memorize all of the concepts and need to save some notes on your graphing calculator. In the following steps, I will show you how to easily write and store notes on any Texas Instruments graphing calculator.
-<br></br>
+Saving notes on your graphing calculator can help you save valuable time when studying concepts that require vast amounts of memorization. Sometimes you don’t have time to memorize all of the concepts and need to save some notes on your graphing calculator. In the following steps, I will show you how to easily write and store notes on any Texas Instruments graphing calculator.<br></br>
+
 1. Hit the prgm button on your graphing calculator.
 
 2. Slide over to NEW and hit enter
@@ -17,8 +17,7 @@ Saving notes on your graphing calculator can help you save valuable time when st
 
 5. Once you have written your notes, press 2nd Quit to exit the notes. Try to avoid pressing del or clear. This might erase the content you have entered.
 
-6. When you want to get back to your saved notes, press prgm then slide over to edit and select the program where you have written your notes.
-<br></br>
+6. When you want to get back to your saved notes, press prgm then slide over to edit and select the program where you have written your notes.<br></br>
 
 Trigonometry
 Algebra
