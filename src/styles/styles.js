@@ -536,7 +536,7 @@ export const calcContainer = {
     borderBottom: `1px solid ${variables.black}`,
     '& h2': {
         ...underline,
-        fontSize: '1.2em',
+        fontSize: '1.55em',
         lineHeight: 1.2,
         marginBottom: 32
     },
@@ -798,8 +798,8 @@ export const resourcesItemTitle = {
 
 export const resourceContainer = {
     'h2': {
-        fontSize: '1.5em',
-        marginBottom: '2em'
+        fontSize: '1.7em',
+        marginBottom: '2em',
     }
 }
 

@@ -13,4 +13,4 @@ const variables = {
     purple: '#9589F0'
 }
 
-export default variables 
+export default variables
