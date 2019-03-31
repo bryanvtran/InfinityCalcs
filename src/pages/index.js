@@ -9,9 +9,9 @@ import CalcLink from '../components/calc-link'
 
 const IndexPage = () => (
   <Layout>
-    <Header title="Graphing Calculator Help" subtitle="Tutorials | Programming | Community"/>
+    <Header title="TI-84 Graphing Calculator Help" subtitle="Tutorials | Programming | Games"/>
     <div css={styles.container}>
-      <SectionHeader title="Graphing Calculators" />
+      <SectionHeader title="TI-84 Graphing Calculators" />
       <div css={styles.calcLinkWrapper}>
         <CalcLink title="TI-84 Plus" href="ti-84-plus/" color={styles.bgBlue} />
         <CalcLink title="TI-84 CE" href="ti-84-ce/" color={styles.bgRed} />

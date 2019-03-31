@@ -1,6 +1,6 @@
 ---
 title: "How to Install Games on your TI-84 Plus CE?"
-image: "./images/ti84ce.png"
+image: "./images/games.png"
 video: ""
 date: "2019-03-26"
 ---
@@ -18,7 +18,7 @@ date: "2019-03-26"
 4. Turn on your graphing calculator.
 5. Press the documents icon right under the camera icon.
 6. Check to see if your calculator is connected.
-7. Download any of the games found at [InfinityCalcs/Games.com] (https://www.infinitycalcs/games.com)
+7. Download any of the games found at [InfinityCalcs.com/Games](https://www.infinitycalcs.com/games)
 8. Once unzipped, drag the file onto the TI-84 CE Connect software
 9. You should now see a 'Send to Calculators' screen. Keep all the settings the same and it 'Send'.
 10. Now the game is on your graphing calculator! <br></br>
