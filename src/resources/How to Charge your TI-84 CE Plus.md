@@ -12,4 +12,4 @@ If your TI-84 CE graphing calculator is low on battery and about to die, have no
 The battery will last up to two weeks per charge under normal use.  
 
 ### **How fast does the TI-84 CE battery charge?**
-To charge a TI-84 CE from 0% to 100% will take 1-2 hours.
+To charge a TI-84 CE from 0% to 100% will take 1-2 hours. <br></br>
