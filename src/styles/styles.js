@@ -769,7 +769,6 @@ export const resourcesItem = {
     boxShadow: '1px 1px 2px 0 rgba(0,0,0,0.25)',
     alignItems: 'center',
     marginBottom: '2em',
-    lineHeight: 0,
     transition: '.5s ease-in-out',
 
     ':hover': {
@@ -781,6 +780,7 @@ export const resourcesItemImage = {
     background: variables.gray,
     width: '25%',
     textAlign: 'center',
+    lineHeight: 0,
     'img': {
         margin: 0,
         width: '100%',

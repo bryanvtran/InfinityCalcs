@@ -1,24 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import { Link, withPrefix} from 'gatsby'
 
 import * as styles from '../styles/styles.js'
 
 const GamesList = ({ games }) => (
     <ul css={styles.gamesList}>
-        {games.sort((a, b) => (a.node.name > b.node.name) ? 1 : ((b.node.name > a.node.name) ? -1 : 0)).map(({node}) => (
-            <li key={node.id} css={styles.gamesListItem}>
+        {games.sort((a, b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0)).map((game, i) => (
+            <li key={i} css={styles.gamesListItem}>
                 <div css={[styles.gamesListItemCell, styles.bold]}>
-                    {node.name}
+                    {game.title}
                 </div>
                 <div css={styles.gamesListItemCell}>
-                    Developer: Elon Musk
+                    Developer: {game.developer}
                 </div>
                 <div css={styles.gamesListItemCell}>
-                    TI-84 CE
+                    {game.calculator}
                 </div>
                 <div css={styles.gamesListItemCell}>
-                    <a css={styles.button} href={node.publicURL} download={node.name}>Download</a>
+                    <a css={styles.button} href={withPrefix(`/games/${game.file}`)}>Download</a>
                 </div>
             </li>
         ))}

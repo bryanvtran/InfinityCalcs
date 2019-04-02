@@ -4,10 +4,11 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import CalcLayout from '../components/calc-layout'
 import GamesList from '../components/games-list'
+import games from '../data/games.js'
 
 import * as styles from '../styles/styles.js'
 
-const Games = ({data}) => (
+const Games = () => (
     <Layout>
         <CalcLayout title="Download Free TI-84 Games: PacMan | Mario | Tetris" extraStyles={[styles.gameHeader]}>
             <div css={[styles.container, styles.calcContainer, styles.gameContainer]}>
@@ -19,25 +20,10 @@ const Games = ({data}) => (
             </div>
             <div css={[styles.container, styles.calcContainer, styles.gameContainer]}>
                 <h2>Popular Games</h2>
-                <GamesList games={data.allFile.edges}/>
+                <GamesList games={games}/>
             </div>
         </CalcLayout>
     </Layout>
 )
 
 export default Games
-
-export const query = graphql`
-{
-  allFile(filter: { sourceInstanceName: { eq: "games" } }) {
-    edges {
-      node {
-        id,
-        name,
-        extension
-        publicURL,
-      }
-    }
-  }
-}
-`
