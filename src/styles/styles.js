@@ -794,6 +794,7 @@ export const resourcesItemTitle = {
     textAlign: 'center',
     fontWeight: 500,
     color: variables.black,
+    padding: '.5em'
 }
 
 export const resourceContainer = {

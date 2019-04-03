@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from 'react-helmet'
 import { graphql } from "gatsby"
 
 import * as styles from '../styles/styles'
@@ -8,9 +9,21 @@ import CalcLayout from '../components/calc-layout'
 
 export default ({ data }) => {
   const post = data.markdownRemark
+  const meta = []
+  if (post.frontmatter.description) {
+    meta.push({name: 'description', content: post.frontmatter.description})
+  }
+  if (post.frontmatter.keywords) {
+    meta.push({name: 'keywords', content: post.frontmatter.description})
+  }
   return (
     <Layout>
-        <CalcLayout title="Resources" titleHref="/resources/"extraStyles={[styles.resourcesHeader]}>
+        <CalcLayout title="Resources" titleHref="/resources/" extraStyles={[styles.resourcesHeader]}>
+              <Helmet
+                title={`${post.frontmatter.title} | Infinity Calcs`}
+                meta={meta}
+              >
+              </Helmet>
              <div css={[styles.container, styles.calcContainer, styles.resourceContainer]}>
                 <h2>{post.frontmatter.title}</h2>
                 {post.frontmatter.video && (
