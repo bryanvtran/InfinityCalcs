@@ -27,14 +27,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `games`,
-        path: `${__dirname}/src/games/`,
-        ignore: [`**/\.*`], // ignore files starting with a dot
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `resources`,
         path: `${__dirname}/src/resources/`,
         ignore: [`**/\.*`], // ignore files starting with a dot
