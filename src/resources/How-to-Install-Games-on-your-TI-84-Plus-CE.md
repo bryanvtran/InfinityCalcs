@@ -1,5 +1,6 @@
 ---
 title: "How to Install Games on your TI-84 Plus CE?"
+description: "If you're bored in class and wanna have some fun. Download some games onto your graphing calculator."
 image: "./images/games.png"
 video: ""
 date: "2019-03-26"
