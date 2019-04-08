@@ -5,4 +5,6 @@ image: "./images/distance.png"
 video: "5VLQFmXqmko"
 date: "2019-03-26"
 ---
-The distance formula is used to find the distance between two points. 
+![Distance Formula](/images/distanceformula.png) <br>
+
+The distance formula is used to find the distance between two points. This program will help you quickly solve any distance formula question.
