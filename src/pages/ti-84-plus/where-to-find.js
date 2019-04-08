@@ -35,8 +35,12 @@ export const query = graphql`
     edges {
       node {
         html
+        fileAbsolutePath
         frontmatter {
           title
+        }
+        fields {
+          slug
         }
       }
     }
