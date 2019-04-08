@@ -19,8 +19,16 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `markdown`,
+        path: `${__dirname}/src/data/markdown`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      }, 
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `data`,
-        path: `${__dirname}/src/data/`,
+        path: `${__dirname}/src/data/definitions`,
         ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
@@ -28,7 +36,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `resources`,
-        path: `${__dirname}/src/resources/`,
+        path: `${__dirname}/src/data/resources/`,
         ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
