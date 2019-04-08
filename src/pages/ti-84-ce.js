@@ -23,6 +23,8 @@ const Ti84Ce = ({ data, ...props }) => {
     e.currentTarget.parentElement.classList.toggle('active')
   }
 
+  const selectedLetter = props.location.search.split('?l=')[1];
+
   return (
     <Layout>
       <CalcLayout title="TI-84 CE">
@@ -35,7 +37,7 @@ const Ti84Ce = ({ data, ...props }) => {
           </div>
           <div css={[styles.container, styles.calcContainer]}>
             <h2>Where To Find…</h2>
-            <Definitions path={props.location.pathname} terms={terms}/>
+            <Definitions selected={selectedLetter} path={props.location.pathname} terms={terms}/>
           </div>
           <div css={[styles.container, styles.calcContainer]}>
             <h2>Solving Math Problems</h2>

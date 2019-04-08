@@ -808,3 +808,8 @@ export const resourceVideo = {
     textAlign: 'center',
     marginBottom: '2em'
 }
+
+
+export const definitionsListContainer = {
+    marginBottom: '2em',
+}
