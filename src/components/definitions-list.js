@@ -17,7 +17,7 @@ const DefinitionsList = ({ letter, terms, path, whereToFind }) => {
                 <p>{displayLetter}</p>
                 <ul>
                     {terms.length ? terms.map((term, i) => (
-                        <li key={i}><Link to={whereToFind ? `${path}${encodeURI(term.node.frontmatter.title)}/` : `${path}where-to-find/${term.node.frontmatter.title}/`}>{term.node.frontmatter.title}</Link></li>
+                        <li key={i}><Link to={term.node.fields.slug}>{term.node.frontmatter.title}</Link></li>
                     )) : 'No terms.'}
                 </ul>
             </>
@@ -35,26 +35,34 @@ const DefinitionsList = ({ letter, terms, path, whereToFind }) => {
                 <div css={styles.definitionsListContainer}>
                     <p>Operations</p>
                     <ul>
-                        {terms.filter((term) => term.node.frontmatter.title.match(/^\W/)).map((term, i) => (
-                            <li key={i}><Link to={`${path}${term.node.frontmatter.title}/`}>{term.node.frontmatter.title}</Link></li>
-                        ))}
+                        {terms.filter((term) => term.node.frontmatter.title.match(/^\W/)).length ? 
+                            terms.filter((term) => term.node.frontmatter.title.match(/^\W/)).map((term, i) => { 
+                            return (
+                                <li key={i}><Link to={term.node.fields.slug}>{term.node.frontmatter.title}</Link></li>
+                            )
+                        }) : 'No terms.'}
                     </ul>
                 </div>
                 <div css={styles.definitionsListContainer}>
                     <p>#</p>
                     <ul>
-                        {terms.filter((term) => term.node.frontmatter.title.match(/^\d/)).map((term, i) => (
-                            <li key={i}><Link to={`${path}${term.node.frontmatter.title}/`}>{term.node.frontmatter.title}</Link></li>
-                        ))}
+                        {terms.filter((term) => term.node.frontmatter.title.match(/^\d/)).length ?
+                            terms.filter((term) => term.node.frontmatter.title.match(/^\d/)).map((term, i) => {
+                            return (
+                                <li key={i}><Link to={term.node.fields.slug}>{term.node.frontmatter.title}</Link></li>
+                            )
+                        }) : 'No terms.'}
                     </ul>
                 </div>
                 {letters.map((letter, i) => (
-                    <div css={styles.definitionsListContainer}>
+                    <div key={i} css={styles.definitionsListContainer}>
                         <p>{letter}</p>
                         <ul>
-                            {lettersDict[letter].length ? lettersDict[letter].map((term, i) => (
-                                <li key={i}><Link to={`${path}${term.node.frontmatter.title}/`}>{term.node.frontmatter.title}</Link></li>
-                            )) : 'No terms.' }
+                            {lettersDict[letter].length ? lettersDict[letter].map((term, i) => {
+                                return (
+                                    <li key={i}><Link to={term.node.fields.slug}>{term.node.frontmatter.title}</Link></li>
+                                )
+                            }) : 'No terms.' }
                         </ul>
                     </div>
                 ))}

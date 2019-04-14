@@ -21,20 +21,21 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
             createNodeField({
                 node,
                 name: `slug`,
-                value: slug,
+                value: slug.toLowerCase(),
             })
         } else if (fileNode.sourceInstanceName === 'data') {
             const slug = createFilePath({ node, getNode, basePath: `data` })
-            console.log(slug);
             createNodeField({
                 node,
                 name: `sourceInstanceName`,
                 value: fileNode.sourceInstanceName,
             })
+            const [, calc, def] = slug.split('/');
+            const url = `${calc}/where-to-find/${def.toLowerCase()}/`
             createNodeField({
                 node,
                 name: `slug`,
-                value: slug,
+                value: url,
             })
         }
     }
@@ -66,20 +67,19 @@ exports.createPages = ({ graphql, actions }) => {
                 path: `/resources${node.fields.slug}`,
                 component: path.resolve(`./src/components/resource-post.js`),
                 context: {
-                // Data passed to context is available
-                // in page queries as GraphQL variables.
-                slug: node.fields.slug,
+                  // Data passed to context is available
+                  // in page queries as GraphQL variables.
+                  slug: node.fields.slug.toLowerCase(),
                 },
             })
           } else if (node.fields.sourceInstanceName === 'data') { 
-              const [, calc, slug] = node.fields.slug.split('/');
               createPage({
-                path: `/${calc}/where-to-find/${slug}/`,
+                path: `/${node.fields.slug}`,
                 component: path.resolve(`./src/components/definition-page.js`),
                 context: {
-                // Data passed to context is available
-                // in page queries as GraphQL variables.
-                slug: node.fields.slug,
+                  // Data passed to context is available
+                  // in page queries as GraphQL variables.
+                  slug: node.fields.slug.toLowerCase(),
                 },
             })
           }

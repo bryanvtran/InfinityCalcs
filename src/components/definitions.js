@@ -48,10 +48,10 @@ class Definitions extends React.Component {
                 <>
                     <div css={styles.definitionsNav}>
                         <ul>
-                            <li><span css={this.state.selected === 'Operations' && styles.selected} onClick={(e) => this.setSelected('Operations')}><Link to={`${this.props.path}?l=Operations`} replace>Operations</Link></span> |</li>
-                            <li> <span css={this.state.selected === 'Numbers' && styles.selected} onClick={(e) => this.setSelected('Numbers')}><Link to={`${this.props.path}?l=Numbers`} replace>#</Link></span> |</li>
-                            {letters.map((letter, i) => (<li key={i}> <span css={this.state.selected === letter && styles.selected} onClick={(e) => this.setSelected(letter)}><Link to={`${this.props.path}?l=${letter}`} replace>{letter}</Link></span> |</li>))}
-                            <li css={styles.textSmall}> <span css={this.state.selected === 'All' && styles.selected} onClick={(e) => this.setSelected('All')}><Link to={this.props.whereToFind ? path : `${path}/where-to-find/`} replace>See all</Link></span></li>
+                            <li><span css={this.state.selected === 'Operations' && styles.selected} onClick={(e) => this.setSelected('Operations')}>Operations</span> |</li>
+                            <li> <span css={this.state.selected === 'Numbers' && styles.selected} onClick={(e) => this.setSelected('Numbers')}>#</span> |</li>
+                            {letters.map((letter, i) => (<li key={i}> <span css={this.state.selected === letter && styles.selected} onClick={(e) => this.setSelected(letter)}>{letter}</span> |</li>))}
+                            <li css={styles.textSmall}> <span css={this.state.selected === 'All' && styles.selected} onClick={(e) => this.setSelected('All')}><Link to={this.props.whereToFind ? path : `${path}where-to-find/`}>See all</Link></span></li>
                         </ul>
                     </div>
                     <div css={styles.definitions}>
@@ -62,7 +62,6 @@ class Definitions extends React.Component {
         }
         else {
             const [, calc, wheretofind] = this.props.path.split('/')
-            console.log(this.props.selected);
             const path = `/${calc}/${wheretofind}/`
             return (
                     <div css={styles.definitionsNav}>

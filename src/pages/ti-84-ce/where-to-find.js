@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../../components/layout'
 import CalcLayout from '../../components/calc-layout'
-import DefinitionsList from '../../components/definitions-list'
+import Definitions from '../../components/definitions'
 
 import * as styles from '../../styles/styles.js'
 
@@ -11,13 +11,15 @@ const WhereToFind = ({data, ...props}) => {
     const terms = data.allMarkdownRemark.edges.sort(function (a, b) {
       return a.node.frontmatter.title.toLowerCase().localeCompare(b.node.frontmatter.title.toLowerCase());
     });
+
+    const selectedLetter = props.location.search.split('?l=')[1];
   
     return (
         <Layout>
             <CalcLayout title="TI-84 CE" titleHref="/ti-84-ce/">
                 <div css={[styles.container, styles.calcContainer, styles.whereToFindContainer]}>
                     <h2>Where To Find…</h2>
-                    <DefinitionsList location={props.location} terms={terms} />
+                    <Definitions selected={selectedLetter} path={props.location.pathname} terms={terms} whereToFind={true} />
                 </div>
             </CalcLayout>
         </Layout>
@@ -32,9 +34,13 @@ export const query = graphql`
   ) {
     edges {
       node {
+        fileAbsolutePath
         html
         frontmatter {
           title
+        }
+        fields {
+          slug
         }
       }
     }
