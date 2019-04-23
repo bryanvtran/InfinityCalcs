@@ -12,7 +12,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     if (node.internal.type === `MarkdownRemark`) {
         const fileNode = getNode(node.parent)
         if (fileNode.sourceInstanceName === 'resources') {
-            const slug = createFilePath({ node, getNode, basePath: `resources` })
+            const slug = createFilePath({ node, getNode, basePath: `src/data/resources` })
             createNodeField({
                 node,
                 name: `sourceInstanceName`,
@@ -24,7 +24,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
                 value: slug.toLowerCase(),
             })
         } else if (fileNode.sourceInstanceName === 'data') {
-            const slug = createFilePath({ node, getNode, basePath: `data` })
+            const slug = createFilePath({ node, getNode, basePath: `src/data/definitions` })
             createNodeField({
                 node,
                 name: `sourceInstanceName`,
