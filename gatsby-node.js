@@ -60,6 +60,7 @@ exports.createPages = ({ graphql, actions }) => {
     }
   `
 ).then(result => {
+    console.log(JSON.stringify(result, null, 4))
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         if (node.fields && node.fields.slug) {
           if (node.fields.sourceInstanceName === 'resources') {
@@ -69,7 +70,7 @@ exports.createPages = ({ graphql, actions }) => {
                 context: {
                   // Data passed to context is available
                   // in page queries as GraphQL variables.
-                  slug: node.fields.slug.toLowerCase(),
+                  slug: node.fields.slug,
                 },
             })
           } else if (node.fields.sourceInstanceName === 'data') { 
@@ -79,7 +80,7 @@ exports.createPages = ({ graphql, actions }) => {
                 context: {
                   // Data passed to context is available
                   // in page queries as GraphQL variables.
-                  slug: node.fields.slug.toLowerCase(),
+                  slug: node.fields.slug,
                 },
             })
           }
