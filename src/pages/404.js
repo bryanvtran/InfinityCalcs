@@ -1,6 +1,8 @@
 import React from 'react'
 import Layout from '../components/layout'
 
+const browser = typeof window !== "undefined" && window;
+
 const NotFoundPage = () => (
   <Layout>
     <h1>NOT FOUND</h1>
