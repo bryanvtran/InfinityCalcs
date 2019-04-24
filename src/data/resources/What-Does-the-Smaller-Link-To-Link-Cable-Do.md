@@ -1,5 +1,5 @@
 ---
-title: "Transferring Programs Between TI-84 Plus CE Graphing Calculators "
+title: "Transferring Programs Between TI-84 Plus CE Graphing Calculators"
 image: "./images/search.png"
 video: ""
 date: "2019-03-26"
