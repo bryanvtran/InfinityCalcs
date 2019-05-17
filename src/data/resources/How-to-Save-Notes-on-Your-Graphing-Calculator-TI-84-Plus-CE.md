@@ -2,7 +2,7 @@
 title: "How to Save Notes on Your Graphing Calculator TI-84 Plus CE"
 image: "./images/notes.png"
 video: "M0mGma9ZkXI"
-date: "2019-03-26"
+date: "2019-05-25"
 ---
 ### **Overview**
 Saving notes on your graphing calculator can help you save valuable time when studying concepts that require vast amounts of memorization. Sometimes you don’t have time to memorize all of the concepts and need to save some notes on your graphing calculator. In the following steps, I will show you how to easily write and store notes on any Texas Instruments graphing calculator.<br></br>

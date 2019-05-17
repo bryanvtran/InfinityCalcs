@@ -3,7 +3,7 @@ title: "How to Program the Quadratic Formula on Your TI 84 Graphing Calculator"
 description: ""
 image: "./images/quadratic.png"
 video: "9JOnVkrTiwg"
-date: "2019-03-26"
+date: "2019-05-24"
 ---
 
 Have you ever been in math class and hoped your graphing calculator could solve the problem for you? Well, there is a way at least for quadratic formula math problems by creating a simple program on your TI-84 graphing calculator.

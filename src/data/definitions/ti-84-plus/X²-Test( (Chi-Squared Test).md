@@ -1,5 +1,5 @@
 ---
-title: "X²-Test("
+title: "X²-Test( (Chi-Squared Test)"
 ---
 
 1. Press *STAT*

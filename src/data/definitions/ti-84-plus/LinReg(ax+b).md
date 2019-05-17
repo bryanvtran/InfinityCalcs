@@ -1,5 +1,5 @@
 ---
-title: "LinReg(a+bx)"
+title: "LinReg(ax+b)"
 ---
 
 1. Press *STAT*

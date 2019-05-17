@@ -1,5 +1,5 @@
 ---
-title: "ANOVA("
+title: "ANOVA( (Analysis of Variance)"
 ---
 
 1. Press *STAT*

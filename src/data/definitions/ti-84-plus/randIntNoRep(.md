@@ -1,5 +1,5 @@
 ---
-title: "randIntRep("
+title: "randIntNoRep("
 ---
 
 1. Press *MATH*

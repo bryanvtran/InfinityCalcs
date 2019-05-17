@@ -1,5 +1,5 @@
 ---
-title: "GBD"
+title: "GBD (Graph Database)"
 ---
 
 1. Press *VARS*
