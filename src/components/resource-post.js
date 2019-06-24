@@ -28,7 +28,7 @@ export default ({ data }) => {
                 <h2>{post.frontmatter.title}</h2>
                 {post.frontmatter.video && (
                     <div css={styles.resourceVideo}>
-                        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${post.frontmatter.video}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${post.frontmatter.video}`} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </div>
                 )}
 

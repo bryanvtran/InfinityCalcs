@@ -1,8 +1,6 @@
 ---
 title: "How to Install Games on your TI-84 Plus CE?"
 description: "If you're bored in class and wanna have some fun. Download some games onto your graphing calculator."
-image: "./images/games.png"
-video: ""
 date: "2019-05-26"
 ---
 
@@ -23,11 +21,11 @@ date: "2019-05-26"
 
 3. Take the USB Charging Cable and plug the USB side into your computer and the other side into your TI-84 CE.
 
-![Install Games - Step 3](/images/step3game.png) <br></br>
+![Install Games - Step 3](/images/step3game.jpg) <br></br>
 
 4. Turn on your graphing calculator.
 
-![Install Games - Step 4](/images/step4game.png)<br></br>
+![Install Games - Step 4](/images/step4game.jpg)<br></br>
 
 5. Press the documents icon right under the camera icon.
 
@@ -49,7 +47,7 @@ date: "2019-05-26"
 
 10. Now the game is on your graphing calculator!
 
-![Install Games - Step 10](/images/step10game.png)<br></br>
+![Install Games - Step 10](/images/step10game.jpg)<br></br>
 
 
 ### **How To Play Games Once Installed**

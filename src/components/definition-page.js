@@ -12,7 +12,7 @@ const DefinitionPage = ({ data, ...props}) => {
     const term = data.markdownRemark
     return (
         <Layout>
-            <CalcLayout title="TI-84 Plus" titleHref="/ti-84-plus/">
+            <CalcLayout title={term.frontmatter.title} titleHref="/ti-84-plus/">
                 <div css={[styles.container, styles.calcContainer, styles.whereToFindContainer]}>
                     <h2>Where To Find…</h2>
                     <Definitions path={props.location.pathname} headerOnly={true} selected={term.frontmatter.title.toUpperCase()[0]}/>
