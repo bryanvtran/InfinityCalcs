@@ -23,7 +23,7 @@ const Ti83Plus = ({ data, ...props }) => {
       <CalcLayout title="TI-83 Plus">
           <div css={[styles.container, styles.calcContainer]}>
             <h2>Getting Started</h2>
-            <p className="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p className="body">The TI-83 graphing calculator came out in 1996 that can be used in math and science courses allowing students to graph functions, perform data plotting and download software apps.</p>
             <div css={styles.center}>
               <Link css={[styles.link, styles.bold]} to='/ti-83-plus/starters-guide'>Starter's Guide</Link>
             </div>

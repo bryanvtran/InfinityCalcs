@@ -8,7 +8,7 @@ import * as styles from '../../styles/styles.js'
 
 const StartersGuide = () => (
     <Layout>
-        <CalcLayout title="TI-83 Plus" titleHref="/ti-83-plus/">
+        <CalcLayout title="TI-83 Plus Starters Guide" titleHref="/ti-83-plus/">
           <div css={[styles.container, styles.calcContainer]}>
             <h2>Getting Started</h2>
           </div>

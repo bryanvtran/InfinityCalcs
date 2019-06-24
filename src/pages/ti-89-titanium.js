@@ -23,7 +23,7 @@ const Ti89Titanium = ({ data, ...props }) => {
       <CalcLayout title="TI-89 Titanium">
           <div css={[styles.container, styles.calcContainer]}>
             <h2>Getting Started</h2>
-            <p className="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p className="body">The TI-89 Titanium is a powerful graphing calculator that makes advanced calculations and 3D graphing easier for engineering and science courses. There is a built-in Computer Algebra System (CAS) that allows you to explore and manipulate mathematical expressions in symbolic form.</p>
             <div css={styles.center}>
               <Link css={[styles.link, styles.bold]} to='/ti-89-titanium/starters-guide'>Starter's Guide</Link>
             </div>

@@ -1,0 +1,7 @@
+---
+title: "LinReg(a+bx)"
+---
+
+1. Press *STAT*
+2. Slide over to *CALC*
+3. Scroll down to find ***LinReg(a+bx)***

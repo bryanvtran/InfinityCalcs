@@ -8,7 +8,7 @@ import * as styles from '../../styles/styles.js'
 
 const GettingStarted = ({ data }) => (
     <Layout>
-        <CalcLayout title="Games" titleHref="/games/" extraStyles={[styles.gameHeader]}>
+        <CalcLayout title="Starter's Guide for Games" titleHref="/games/" extraStyles={[styles.gameHeader]}>
           <div css={[styles.container, styles.calcContainer, styles.gameContainer]}>
             <h2>Getting Started</h2>
             <div css={styles.markdownStyles} dangerouslySetInnerHTML={{ __html: data.file.childMarkdownRemark.html }} />

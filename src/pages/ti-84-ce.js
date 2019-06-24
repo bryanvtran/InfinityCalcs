@@ -30,7 +30,7 @@ const Ti84Ce = ({ data, ...props }) => {
       <CalcLayout title="TI-84 CE">
           <div css={[styles.container, styles.calcContainer]}>
             <h2>Getting Started</h2>
-            <p className="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p className="body">TI-84 Plus CE is Texas Instruments latest graphing calculator that comes with an LCD color display screen. See the guide below to get started.</p>
             <div css={styles.center}>
               <Link css={[styles.link, styles.bold]} to='/ti-84-ce/starters-guide'>Starter's Guide</Link>
             </div>
